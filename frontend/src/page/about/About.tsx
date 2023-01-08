@@ -1,4 +1,4 @@
-import { Box, Chip, Grid, Typography } from "@mui/material";
+import { Box, Button, Chip, Grid, Typography } from "@mui/material";
 import CustomAppbar from "../../component/appbar/CustomAppbar";
 import themes from "../../constant/themes";
 import { word } from "../../languages/Word";
@@ -68,7 +68,7 @@ export default function About() {
         );
     }
 
-    const renderRowDetailForWorkExperience = (detail: string, url: string | null, chip: boolean, mb?: boolean) => {
+    const renderRowHeaderForWorkExperience = (detail: string, url: string | null, mb?: boolean) => {
         return (
             <Grid
                 container
@@ -82,11 +82,70 @@ export default function About() {
                     paddingRight: `${themes.marginComponent / 3}px`,
                     mb: mb ? `${themes.marginComponent / 6}px` : 0,
                 }}
+                onClick={() => url ? window.open(url) : {}}
+            >
+                {url
+                    ? <Button
+                        id={"BT_URL_" + detail}
+                        variant={"text"}
+                        size={"small"}
+                        sx={{
+                            fontWeight: url ? "bold" : "",
+                            textTransform: "none",
+                            color: themes.color.mainText,
+                            fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default },
+                            cursor: url ? "pointer" : "",
+                            padding: 0,
+                            "&:hover": {
+                                bgcolor: themes.color.hover,
+                                opacity: 0.8
+                            }
+                        }}
+                        endIcon={<CustomIcon name={"url"} color={themes.color.mainText} sizeNumber={16} />}
+                    >
+                        {detail}
+                    </Button>
+                    : <Typography
+                        sx={{
+                            fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default },
+                            color: themes.color.mainText,
+                        }}
+                    >
+                        {detail}
+                    </Typography>
+                }
+            </Grid>
+        );
+    }
+
+    const renderRowDetailForWorkExperience = (detail: string, url: string | null, chip: boolean, mb?: boolean) => {
+        return (
+            <Grid
+                container
+                item xs={12}
+                columns={{ xs: 2, md: 12 }}
+                direction={"row"}
+                justifyContent={"flex-start"}
+                alignItems={"center"}
+                onClick={() => url ? window.open(url) : {}}
+                sx={{
+                    paddingLeft: chip ? `${themes.marginComponent / 2}px` : `${themes.marginComponent}px`,
+                    paddingRight: `${themes.marginComponent / 3}px`,
+                    mb: mb ? `${themes.marginComponent / 6}px` : 0,
+                }}
             >
                 {chip
                     ? <Chip
-                        sx={{ "&:hover": { opacity: url ? 0.8 : 1, cursor: url ? "pointer" : "" } }}
+                        sx={{
+                            "&:hover": {
+                                opacity: url ? 0.8 : 1,
+                                cursor: url ? "pointer" : ""
+                            },
+                            paddingRight: url ? `${themes.marginComponent / 3}px` : 0
+                        }}
                         variant={"outlined"}
+                        onDelete={() => { }}
+                        deleteIcon={url ? <CustomIcon name={"url"} color={themes.color.mainText} sizeNumber={16} /> : <></>}
                         label={
                             <Typography
                                 sx={{
@@ -94,7 +153,6 @@ export default function About() {
                                     color: themes.color.mainText,
                                     fontWeight: "bold",
                                 }}
-                                onClick={() => url ? window.open(url) : {}}
                             >
                                 {detail}
                             </Typography>
@@ -108,7 +166,6 @@ export default function About() {
                             textDecoration: url ? "underline" : "",
                             cursor: url ? "pointer" : "",
                         }}
-                        onClick={() => url ? window.open(url) : {}}
                     >
                         {detail}
                     </Typography>
@@ -232,8 +289,8 @@ export default function About() {
                 }}
             >
                 {renderRowHeader(word().TEXT_WORK_EXPERIENCE)}
-                {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_1, urlDigio, false, true)}
-                {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_1, null, false)}
+                {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_1, urlDigio, true)}
+                {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_1, null)}
                 <CustomDivider />
                 {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_PROJECT_1, urlTtbSmartShop, true, true)}
                 {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_1_1, null, false, true)}

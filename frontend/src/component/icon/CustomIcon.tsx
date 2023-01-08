@@ -11,6 +11,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import ListIcon from '@mui/icons-material/List';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 interface ICustomIconProps {
     name: string;
@@ -38,5 +39,6 @@ export default function CustomIcon(props: ICustomIconProps) {
     else if (name === "skill") return <ListIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
     else if (name === "arrow") return <KeyboardArrowDownIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
     else if (name === "add") return <AddCircleIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "url") return <OpenInNewIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
     else return <ErrorIcon fontSize={size} />;
 }

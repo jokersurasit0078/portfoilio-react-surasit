@@ -10,6 +10,7 @@ import muiImg from "../../image/mui.png";
 import { word } from "../../languages/Word";
 import Footer from "../../component/footer/Footer";
 import { useEffect } from "react";
+import CustomIcon from "../../component/icon/CustomIcon";
 
 export default function Home() {
     const listImg = [
@@ -106,6 +107,7 @@ export default function Home() {
                                 opacity: 0.8
                             }
                         }}
+                        endIcon={<CustomIcon name={"url"} color={themes.color.mainText} sizeNumber={12}/>}
                         onClick={() => window.open(urlGithub)}
                     >
                         {"GitHub"}
