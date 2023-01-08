@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import CustomAppbar from "../../component/appbar/CustomAppbar";
 import themes from "../../constant/themes";
 import profile from "../../image/profile.jpg";
@@ -9,7 +9,7 @@ import routerImg from "../../image/react_router.png";
 import muiImg from "../../image/mui.png";
 import { word } from "../../languages/Word";
 import Footer from "../../component/footer/Footer";
-import { useEffect, useRef, useState } from "react";
+import { useEffect } from "react";
 
 export default function Home() {
     const listImg = [
@@ -20,22 +20,22 @@ export default function Home() {
         { src: firebaseImg, width: 150, height: 40 },
     ];
     const profileImgSize = 220;
-    const imgRef = useRef<HTMLDivElement | null>(null);
-    const [overflowImg, setOverflowImg] = useState<boolean>(false);
+    const urlGithub = "https://github.com/jokersurasit0078/portfoilio-react-surasit";
+    // const imgRef = useRef<HTMLDivElement | null>(null);
+    // const [overflowImg, setOverflowImg] = useState<boolean>(false);
 
     useEffect(() => {
-        window.addEventListener('resize', updateDimensions);
+        // window.addEventListener('resize', updateDimensions);
     }, []);
 
-    const updateDimensions = () => {
-        isOverflowImgTools(imgRef.current);
-    }
+    // const updateDimensions = () => {
+    //     isOverflowImgTools(imgRef.current);
+    // }
 
-    const isOverflowImgTools = (event: any) => {
-        const resultWidth = event.offsetHeight < event.scrollHeight;
-        console.log(`${event.offsetWidth} < ${event.scrollWidth} result = ${resultWidth}`);
-        setOverflowImg(resultWidth);
-    }
+    // const isOverflowImgTools = (event: any) => {
+    //     const resultWidth = event.offsetWidth < event.scrollWidth;
+    //     setOverflowImg(resultWidth);
+    // }
 
     const renderTextProfile = (xs: string, md: string) => {
         return (
@@ -44,7 +44,7 @@ export default function Home() {
                     {word().TEXT_PROFILE_NAME}
                 </Typography>
                 <Grid container direction={"row"} sx={{ marginBottom: `${themes.marginComponent / 4}px` }}>
-                    <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", color: themes.color.mainText, backgroundColor: themes.color.main, paddingLeft: "10px", paddingRight: "10px", borderRadius: themes.radius }}>
+                    <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", color: themes.color.mainText, bgcolor: themes.color.main, paddingLeft: "10px", paddingRight: "10px", borderRadius: themes.radius }}>
                         Front-end
                     </Typography>
                     <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", paddingLeft: "7px", color: themes.color.mainText }}>
@@ -57,7 +57,7 @@ export default function Home() {
                 <Typography sx={{ fontSize: themes.fontsize.small, color: themes.color.mainText, marginBottom: `${themes.marginComponent / 4}px` }}>
                     {word().TEXT_PROFILE_DETAIL_2}
                 </Typography>
-                <Grid container direction={"row"} wrap={"nowrap"} sx={{ maxWidth: "100%", overflow: "scroll", display: overflowImg ? "none" : "" }} ref={imgRef}>
+                <Grid container direction={"row"} sx={{ maxWidth: "100%", marginBottom: `${themes.marginComponent / 4}px` }}>
                     {listImg.map((item: any, index: number) => {
                         return (
                             <Grid
@@ -68,7 +68,7 @@ export default function Home() {
                                 alignItems={"center"}
                                 sx={{
                                     padding: `${themes.marginComponent / 4}px`,
-                                    backgroundColor: "white",
+                                    bgcolor: "white",
                                     borderRadius: "10px",
                                     width: item.width + 20,
                                     height: 60,
@@ -89,6 +89,28 @@ export default function Home() {
                         );
                     })}
                 </Grid>
+                <Grid container direction={"row"} alignItems={"center"} sx={{ maxWidth: "100%" }}>
+                    <Typography sx={{ fontSize: themes.fontsize.small, color: themes.color.mainText, paddingRight: `${themes.marginComponent / 4}px` }}>
+                        {word().TEXT_PROFILE_DETAIL_3}
+                    </Typography>
+                    <Button
+                        id={"BT_GITHUB"}
+                        variant={"contained"}
+                        size={"small"}
+                        sx={{
+                            textTransform: "none",
+                            fontSize: themes.fontsize.small,
+                            bgcolor: themes.color.bg,
+                            "&:hover": {
+                                bgcolor: themes.color.bg,
+                                opacity: 0.8
+                            }
+                        }}
+                        onClick={() => window.open(urlGithub)}
+                    >
+                        {"GitHub"}
+                    </Button>
+                </Grid>
             </Grid>
         );
     }
@@ -103,7 +125,7 @@ export default function Home() {
                 alignItems={"center"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: `${themes.marginComponent / 2}px`,
                     padding: `${themes.marginComponent}px`,
                     borderRadius: themes.radius,
@@ -130,7 +152,7 @@ export default function Home() {
     }
 
     return (
-        <Box sx={{ display: "flex", backgroundColor: themes.color.bg }}>
+        <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
             <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
                 <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>

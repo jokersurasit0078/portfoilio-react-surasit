@@ -55,7 +55,7 @@ export default function Skill() {
                                 height: "30px",
                                 mr: listItem.length - 1 !== index ? `${themes.marginComponent / 4}px` : "0px",
                                 mb: `${themes.marginComponent / 4}px`,
-                                backgroundColor: themes.color.main
+                                bgcolor: themes.color.main
                             }}
                             label={
                                 <Typography sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: themes.color.mainText, fontWeight: "bold" }}>
@@ -79,7 +79,7 @@ export default function Skill() {
                 alignItems={"flex-start"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: `${themes.marginComponent / 2}px`,
                     padding: `${themes.marginComponent}px`,
                     borderRadius: themes.radius,
@@ -105,7 +105,7 @@ export default function Skill() {
     }
 
     return (
-        <Box sx={{ display: "flex", backgroundColor: themes.color.bg }}>
+        <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
             <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
                 <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px`}}>

@@ -35,7 +35,7 @@ export default function About() {
         return (
             <Grid item xs={12} sx={{ mb: `${themes.marginComponent / 3}px` }}>
                 <Chip
-                    sx={{ backgroundColor: themes.color.main }}
+                    sx={{ bgcolor: themes.color.main }}
                     label={
                         <Typography sx={{ fontSize: { xs: themes.fontsize.default, md: themes.fontsize.big }, color: themes.color.mainText, fontWeight: "bold" }}>
                             {header.toUpperCase()}
@@ -160,7 +160,7 @@ export default function About() {
                 alignItems={"center"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: `${themes.marginComponent / 2}px`,
                     paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
@@ -194,7 +194,7 @@ export default function About() {
                 alignItems={"center"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
@@ -221,7 +221,7 @@ export default function About() {
                 alignItems={"center"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
@@ -268,7 +268,7 @@ export default function About() {
                 alignItems={"center"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                     paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
@@ -285,7 +285,7 @@ export default function About() {
     }
 
     return (
-        <Box sx={{ display: "flex", backgroundColor: themes.color.bg }}>
+        <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
             <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
                 <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>

@@ -69,7 +69,7 @@ export default function CustomAppbar() {
 
     const renderListMenuDrawerForMobile = (
         <div style={{ backgroundColor: themes.color.bg }}>
-            <Toolbar sx={{ backgroundColor: themes.color.bg }}>
+            <Toolbar sx={{ bgcolor: themes.color.bg }}>
                 <Grid
                     container
                     justifyContent={"center"}
@@ -89,7 +89,7 @@ export default function CustomAppbar() {
                         <ListItemButton
                             sx={{
                                 "&:hover": {
-                                    backgroundColor: themes.color.hover
+                                    bgcolor: themes.color.hover
                                 }
                             }}
                             onClick={() => handleMenuSideBar(item.url)}
@@ -118,7 +118,7 @@ export default function CustomAppbar() {
                 size="large"
                 color="inherit"
                 aria-label="menu"
-                sx={{ "&:hover": { backgroundColor: themes.color.hover }, width: `${themes.drawerWidth}px`, height: themes.appbarHeight, borderRadius: "0px" }}
+                sx={{ "&:hover": { bgcolor: themes.color.hover }, width: `${themes.drawerWidth}px`, height: themes.appbarHeight, borderRadius: "0px" }}
                 onClick={handleDrawerToggle}
             >
                 <Grid container justifyContent={"center"} alignItems={"center"} sx={{ border: `2px solid ${themes.color.mainText}`, width: "35px", height: "35px", borderRadius: "5px" }}>
@@ -127,7 +127,7 @@ export default function CustomAppbar() {
             </IconButton>
             <List>
                 {listMenu.map((item: any, index: number) => (
-                    <ListItem key={"MENU_ITEM_DESKTOP_" + (item.text).toLocaleUpperCase()} disablePadding sx={{ "&:hover": { backgroundColor: themes.color.hover } }}>
+                    <ListItem key={"MENU_ITEM_DESKTOP_" + (item.text).toLocaleUpperCase()} disablePadding sx={{ "&:hover": { bgcolor: themes.color.hover } }}>
                         <Grid
                             container
                             direction={"column"}
@@ -190,7 +190,7 @@ export default function CustomAppbar() {
                         sx={{
                             display: { xs: "flex", sm: "none" },
                             "& .MuiPaper-root": {
-                                backgroundColor: themes.color.hover
+                                bgcolor: themes.color.hover
                             }
                         }}
                     >
@@ -246,7 +246,7 @@ export default function CustomAppbar() {
                         sx={{
                             padding: "5px",
                             borderRadius: themes.radius,
-                            backgroundColor: themes.color.hover,
+                            bgcolor: themes.color.hover,
                             boxShadow: themes.shadow,
                             mr: "10px",
                         }}
@@ -305,7 +305,7 @@ export default function CustomAppbar() {
                 position="fixed"
                 sx={{
                     height: themes.appbarHeight,
-                    backgroundColor: themes.color.bg,
+                    bgcolor: themes.color.bg,
                     boxShadow: "none"
                 }}
             >

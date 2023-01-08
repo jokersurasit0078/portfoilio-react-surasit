@@ -8,6 +8,7 @@ export default Object.freeze({
         TEXT_PROFILE_NAME: "สวัสดีครับ, ผมชื่อนายสุรสิทธิ์ สุวรรณระ (โจ๊กเกอร์)",
         TEXT_PROFILE_DETAIL_1: "ผมเป็น Front-end Developer ที่ใช้ React ในการพัฒนาเว็บไซต์ โดยมีประสบการณ์มากกว่า 2 ปี",
         TEXT_PROFILE_DETAIL_2: "เว็บไซต์นี้สร้างขึ้นโดยใช้เครื่องมือดังนี้ :",
+        TEXT_PROFILE_DETAIL_3: "Repository ของเว็บไซต์นี้ :",
         TEXT_CALL_ME_NOW: "ติดต่อเดี๋ยวนี้",
         TEXT_COPY_EMAIL: "คัดลอกสำเร็จ ! ! !",
         TEXT_BASE: "หลัก",
@@ -35,7 +36,7 @@ export default Object.freeze({
         TEXT_MARITAL_STATUS: "สถานะภาพ",
         TEXT_MARITAL_STATUS_DETAIL: "โสด",
         TEXT_INTEREST: "ความสนใจและกิจกรรม",
-        TEXT_INTEREST_DETAIL: "ฟังเพลง, เล่นดนตรี (กลองชุด), ดู ยูทูบ",
+        TEXT_INTEREST_DETAIL: "ฟังเพลง, เล่นดนตรี (กลองชุด), ดูยูทูป",
 
         // EDUCATION
         TEXT_EDUCATION_ITEM_1: "พ.ค. 2560 – มี.ค. 2564",

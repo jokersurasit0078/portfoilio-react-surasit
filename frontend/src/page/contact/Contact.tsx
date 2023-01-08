@@ -69,7 +69,7 @@ export default function Contact() {
                 alignItems={"center"}
                 columns={{ xs: 2, md: 12 }}
                 sx={{
-                    backgroundColor: "white",
+                    bgcolor: "white",
                     borderRadius: "40px",
                     mb: { xs: mbxs ? `${themes.marginComponent / 3}px` : "0px", md: mbmd ? `${themes.marginComponent / 3}px` : "0px" },
                     cursor: "pointer",
@@ -88,7 +88,7 @@ export default function Contact() {
                     sx={{
                         height: "100%",
                         backgroundImage: chip.length === 2 ? `linear-gradient(90deg, ${chip[0]}, ${chip[1]})` : "",
-                        backgroundColor: chip.length === 1 ? chip[0] : "",
+                        bgcolor: chip.length === 1 ? chip[0] : "",
                         borderTopLeftRadius: "40px",
                         borderBottomLeftRadius: "40px",
                         paddingTop: { xs: `${themes.marginComponent / 4}px`, md: `${themes.marginComponent / 3}px` },
@@ -102,7 +102,7 @@ export default function Contact() {
                         sx={{
                             borderRadius: `${size}px`,
                             padding: `${themes.marginComponent / 3}px`,
-                            backgroundColor: "white",
+                            bgcolor: "white",
                             width: `${size * 2}px`,
                             height: `${size * 2}px`,
                         }}
@@ -151,7 +151,7 @@ export default function Contact() {
                             sx={{
                                 width: "30px",
                                 backgroundImage: chip.length === 2 ? `linear-gradient(90deg, ${chip[0]}, ${chip[1]})` : "",
-                                backgroundColor: chip.length === 1 ? chip[0] : "",
+                                bgcolor: chip.length === 1 ? chip[0] : "",
                                 padding: "5px",
                                 borderRadius: "50%",
                             }}
@@ -174,7 +174,7 @@ export default function Contact() {
                 alignItems={"center"}
                 sx={{
                     width: { xs: "90%", lg: themes.containerWidth },
-                    backgroundColor: themes.color.hover,
+                    bgcolor: themes.color.hover,
                     marginTop: `${themes.marginComponent / 2}px`,
                     padding: `${themes.marginComponent / 2}px`,
                     borderRadius: themes.radius,
@@ -200,7 +200,7 @@ export default function Contact() {
     }
 
     return (
-        <Box sx={{ display: "flex", backgroundColor: themes.color.bg }}>
+        <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
             <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
                 <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px`}}>
