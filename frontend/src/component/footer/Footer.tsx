@@ -31,7 +31,7 @@ export default function Footer() {
                         cursor: "pointer"
                     }
                 }}>
-                {`Portfolio Version : ${window.WEB_VERSION} © 2023 @jokersurasit0078`}
+                {`Portfolio Version : ${window.WEB_VERSION} © ${new Date().getFullYear()} @jokersurasit0078`}
             </Typography>
         </Grid>
     );
