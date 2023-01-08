@@ -90,6 +90,7 @@ export default function About() {
                         variant={"text"}
                         size={"small"}
                         sx={{
+                            textAlign: "left",
                             fontWeight: url ? "bold" : "",
                             textTransform: "none",
                             color: themes.color.mainText,
@@ -129,7 +130,7 @@ export default function About() {
                 alignItems={"center"}
                 onClick={() => url ? window.open(url) : {}}
                 sx={{
-                    paddingLeft: chip ? `${themes.marginComponent / 2}px` : `${themes.marginComponent}px`,
+                    paddingLeft: chip ? `${themes.marginComponent / 2}px` : `${themes.marginComponent - 5}px`,
                     paddingRight: `${themes.marginComponent / 3}px`,
                     mb: mb ? `${themes.marginComponent / 6}px` : 0,
                 }}
