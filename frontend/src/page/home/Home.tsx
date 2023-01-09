@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Fade, Grid, Typography } from "@mui/material";
 import CustomAppbar from "../../component/appbar/CustomAppbar";
 import themes from "../../constant/themes";
 import profile from "../../image/profile.jpg";
@@ -107,7 +107,7 @@ export default function Home() {
                                 opacity: 0.8
                             }
                         }}
-                        endIcon={<CustomIcon name={"url"} color={themes.color.mainText} sizeNumber={12}/>}
+                        endIcon={<CustomIcon name={"url"} color={themes.color.mainText} sizeNumber={12} />}
                         onClick={() => window.open(urlGithub)}
                     >
                         {"GitHub"}
@@ -119,37 +119,39 @@ export default function Home() {
 
     const renderProfile = () => {
         return (
-            <Grid
-                container
-                item xs={12}
-                direction={"row"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                sx={{
-                    width: { xs: "90%", lg: themes.containerWidth },
-                    bgcolor: themes.color.hover,
-                    marginTop: `${themes.marginComponent / 2}px`,
-                    padding: `${themes.marginComponent}px`,
-                    borderRadius: themes.radius,
-                    boxShadow: themes.shadow
-                }}
-            >
-                {renderTextProfile("none", "flex")}
-                <Grid item xs={5} container justifyContent={"center"} alignItems={"center"} columns={{ xs: 2, md: 12 }}>
-                    <img
-                        src={profile}
-                        alt="profile"
-                        style={{
-                            width: `${profileImgSize}px`,
-                            height: `${profileImgSize}px`,
-                            borderRadius: `${profileImgSize / 2}px`,
-                            border: `5px solid ${themes.color.main}`,
-                            boxShadow: themes.shadow
-                        }}
-                    />
+            <Fade in={true} timeout={{ enter: 500, exit: 200 }}>
+                <Grid
+                    container
+                    item xs={12}
+                    direction={"row"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    sx={{
+                        width: { xs: "90%", lg: themes.containerWidth },
+                        bgcolor: themes.color.hover,
+                        marginTop: `${themes.marginComponent / 2}px`,
+                        padding: `${themes.marginComponent}px`,
+                        borderRadius: themes.radius,
+                        boxShadow: themes.shadow
+                    }}
+                >
+                    {renderTextProfile("none", "flex")}
+                    <Grid item xs={5} container justifyContent={"center"} alignItems={"center"} columns={{ xs: 2, md: 12 }}>
+                        <img
+                            src={profile}
+                            alt="profile"
+                            style={{
+                                width: `${profileImgSize}px`,
+                                height: `${profileImgSize}px`,
+                                borderRadius: `${profileImgSize / 2}px`,
+                                border: `5px solid ${themes.color.main}`,
+                                boxShadow: themes.shadow
+                            }}
+                        />
+                    </Grid>
+                    {renderTextProfile("flex", "none")}
                 </Grid>
-                {renderTextProfile("flex", "none")}
-            </Grid >
+            </Fade>
         );
     }
 

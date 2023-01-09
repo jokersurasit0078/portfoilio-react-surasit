@@ -1,4 +1,4 @@
-import { Alert, Box, Grid, Snackbar, Typography } from "@mui/material";
+import { Alert, Box, Fade, Grid, Snackbar, Typography } from "@mui/material";
 import CustomAppbar from "../../component/appbar/CustomAppbar";
 import themes from "../../constant/themes";
 import facebookImg from "../../image/facebook.png";
@@ -75,7 +75,7 @@ export default function Contact() {
                     cursor: "pointer",
                     boxShadow: themes.shadow,
                     "&:hover": {
-                        opacity: 0.8
+                        bgcolor: "#f2f2f2",
                     }
                 }}
                 onClick={() => handleClickItemContact(text)}
@@ -166,36 +166,41 @@ export default function Contact() {
 
     const renderContact = () => {
         return (
-            <Grid
-                container
-                item xs={12}
-                direction={"row"}
-                justifyContent={"space-around"}
-                alignItems={"center"}
-                sx={{
-                    width: { xs: "90%", lg: themes.containerWidth },
-                    bgcolor: themes.color.hover,
-                    marginTop: `${themes.marginComponent / 2}px`,
-                    padding: `${themes.marginComponent / 2}px`,
-                    borderRadius: themes.radius,
-                    boxShadow: themes.shadow
-                }}
-            >
-                {listContact.map((item: any, index: number) => {
-                    return renderItemContact(
-                        "CARD_CONTACT_" + (item.text).toUpperCase(),
-                        item.src,
-                        item.size,
-                        item.text,
-                        item.detail,
-                        item.chip,
-                        index !== listContact.length - 1,
-                        index !== listContact.length - 1,
-                        item.action
-                    );
-                })}
-                {listContact.length % 2 !== 0 ? <Grid item xs={5.5} /> : null}
-            </Grid>
+            <Fade in={true} timeout={{ enter: 500, exit: 200 }}>
+                <Grid
+                    container
+                    item xs={12}
+                    direction={"row"}
+                    justifyContent={"space-around"}
+                    alignItems={"center"}
+                    sx={{
+                        width: { xs: "90%", lg: themes.containerWidth },
+                        bgcolor: themes.color.hover,
+                        marginTop: `${themes.marginComponent / 2}px`,
+                        padding: `${themes.marginComponent / 2}px`,
+                        borderRadius: themes.radius,
+                        boxShadow: themes.shadow
+                    }}
+                >
+
+                    {listContact.map((item: any, index: number) => {
+                        return <Fade in={true} timeout={{ enter: (index + 1) * 500, exit: 200 }}>
+                            {renderItemContact(
+                                "CARD_CONTACT_" + (item.text).toUpperCase(),
+                                item.src,
+                                item.size,
+                                item.text,
+                                item.detail,
+                                item.chip,
+                                index !== listContact.length - 1,
+                                index !== listContact.length - 1,
+                                item.action
+                            )}
+                        </Fade>
+                    })}
+                    {listContact.length % 2 !== 0 ? <Grid item xs={5.5} /> : null}
+                </Grid>
+            </Fade>
         );
     }
 
@@ -203,7 +208,7 @@ export default function Contact() {
         <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
             <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
-                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px`}}>
+                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>
                     <CustomHeader text={word().MENU_4} />
                     {renderContact()}
                     <Footer />

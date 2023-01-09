@@ -230,7 +230,7 @@ export default function CustomAppbar() {
                             </Button>
                         </Grid>
                     </Menu>
-                </Grid >
+                </Grid>
                 <Grid
                     container
                     direction={"row"}
@@ -294,7 +294,7 @@ export default function CustomAppbar() {
                     >
                         {word().TEXT_CALL_ME_NOW}
                     </Button>
-                </Grid >
+                </Grid>
             </>
         );
     }
