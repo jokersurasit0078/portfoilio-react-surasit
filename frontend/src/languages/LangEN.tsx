@@ -48,7 +48,7 @@ export default Object.freeze({
         TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (May 2021 - Present)",
         TEXT_WORK_EXPERIENCE_POSITION_1: "Front-end Developer",
         TEXT_WORK_EXPERIENCE_PROJECT_1: "ttb Smart Shop",
-        TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ Develop application page from version 2.x.x to version 3.x.x (re-branding)",
+        TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ Develop ttb smartshop merchant application from version 2.x.x to version 3.x.x (re-branding)",
         TEXT_WORK_EXPERIENCE_DETAIL_1_2: "✓ Add and edit functionality within the app",
         TEXT_WORK_EXPERIENCE_DETAIL_1_3: "✓ Updated Target SDK Version (Android) to comply with Google Play rules",
         TEXT_WORK_EXPERIENCE_PROJECT_2: "e-Withholding Tax",
