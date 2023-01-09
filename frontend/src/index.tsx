@@ -10,6 +10,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./constant/themeMui";
 import { initializeApp } from "firebase/app";
+import CustomFloatingButton from "./component/button/CustomFloatingButton";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDi4HB-OYsYWY99WFnUx_rJvv63EWuQ5-0",
@@ -35,6 +36,7 @@ root.render(
       <PersistGate loading={null} persistor={persistor}>
         <ThemeProvider theme={theme}>
           <AppRouter />
+          <CustomFloatingButton />
         </ThemeProvider>
       </PersistGate>
     </Provider>

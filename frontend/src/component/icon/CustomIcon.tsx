@@ -12,6 +12,7 @@ import ListIcon from '@mui/icons-material/List';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 interface ICustomIconProps {
     name: string;
@@ -25,20 +26,21 @@ export default function CustomIcon(props: ICustomIconProps) {
         name = "",
         size = "medium",
         color = "#b3b3b3",
-        sizeNumber = "",
+        sizeNumber = "20px",
     } = props;
 
-    if (name === "mail") return <MailIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber }} />;
-    else if (name === "copy") return <ContentCopyIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "inbox") return <InboxIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "menu") return <MenuIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "phone") return <PhoneIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "home") return <HomeIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "about") return <AccountBoxIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "contact") return <MessageIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "skill") return <ListIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "arrow") return <KeyboardArrowDownIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "add") return <AddCircleIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
-    else if (name === "url") return <OpenInNewIcon fontSize={size} style={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    if (name === "mail") return <MailIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber }} />;
+    else if (name === "copy") return <ContentCopyIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "inbox") return <InboxIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "menu") return <MenuIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "phone") return <PhoneIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "home") return <HomeIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "about") return <AccountBoxIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "contact") return <MessageIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "skill") return <ListIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "arrow") return <KeyboardArrowDownIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "add") return <AddCircleIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "url") return <OpenInNewIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
+    else if (name === "up") return <ArrowUpwardIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber}} />;
     else return <ErrorIcon fontSize={size} />;
 }
