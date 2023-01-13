@@ -299,6 +299,9 @@ export default function About() {
                     {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_1, urlDigio, true)}
                     {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_1, null)}
                     <CustomDivider />
+                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_2, urlDigio, true)}
+                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_2, null)}
+                    <CustomDivider />
                     {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_PROJECT_1, urlTtbSmartShop, true, true)}
                     {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_1_1, null, false, true)}
                     {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_1_2, null, false, true)}

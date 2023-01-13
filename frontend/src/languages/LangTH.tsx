@@ -4,6 +4,7 @@ export default Object.freeze({
         MENU_2: "เกี่ยวกับฉัน",
         MENU_3: "ทักษะ/เครื่องมือที่ใช้",
         MENU_4: "ติดต่อ",
+        MENU_5: "สร้างคอมโพเนนต์",
 
         TEXT_PROFILE_NAME: "สวัสดีครับ, ผมชื่อนายสุรสิทธิ์ สุวรรณระ (โจ๊กเกอร์)",
         TEXT_PROFILE_DETAIL_1: "ผมเป็น Front-end Developer ที่ใช้ React ในการพัฒนาเว็บไซต์ โดยมีประสบการณ์มากกว่า 2 ปี",
@@ -13,6 +14,9 @@ export default Object.freeze({
         TEXT_COPY_EMAIL: "คัดลอกสำเร็จ ! ! !",
         TEXT_BASE: "หลัก",
         TEXT_BASIC: "พื้นฐาน",
+        TEXT_RESET_SUCCESS: "รีเซ็ทคอมโพเนนต์แล้ว ! ! !",
+        TEXT_SOURCE_CODE: "ซอร์สโค้ด",
+        TEXT_COPY_CODE: "คัดลอกโค้ด",
 
         TEXT_PERSONAL: "ข้อมูลส่วนตัว",
         TEXT_EDUCATION: "ประวัติการศึกษา",
@@ -45,8 +49,10 @@ export default Object.freeze({
         TEXT_EDUCATION_ITEM_DETAIL_2: "โรงเรียนชุมพลโพนพิสัย, จังหวัดหนองคาย ประเทศไทย",
 
         // EXPERIENCE
-        TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (พ.ค. 2564 - ปัจจุบัน)",
+        TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (ธ.ค. 2563 - มี.ค 2564) (ฝึกสหกิจ)",
         TEXT_WORK_EXPERIENCE_POSITION_1: "Front-end Developer",
+        TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (พ.ค. 2564 - ปัจจุบัน)",
+        TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer",
         TEXT_WORK_EXPERIENCE_PROJECT_1: "ttb Smart Shop",
         TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ พัฒนาหน้าแอปพลิเคชั่น จากเวอร์ชั่น 2.x.x เป็น เวอร์ชั่น 3.x.x (re-branding)",
         TEXT_WORK_EXPERIENCE_DETAIL_1_2: "✓ เพิ่มและแก้ไขฟังก์ชั่นการทำงานภายในแอป",

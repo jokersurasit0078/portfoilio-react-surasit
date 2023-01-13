@@ -4,6 +4,7 @@ export default Object.freeze({
         MENU_2: "About",
         MENU_3: "Skill/Tools",
         MENU_4: "Contact",
+        MENU_5: "Generate Component",
 
         TEXT_PROFILE_NAME: "Hello, I'm Surasit Suwannara (Joker)",
         TEXT_PROFILE_DETAIL_1: "I'm a front-end developer using React in development with over 2 years of experience.",
@@ -13,11 +14,14 @@ export default Object.freeze({
         TEXT_COPY_EMAIL: "Copy success ! ! !",
         TEXT_BASE: "Base",
         TEXT_BASIC: "Basic",
+        TEXT_RESET_SUCCESS: "Component reset ! ! !",
+        TEXT_SOURCE_CODE: "Source Code",
 
         TEXT_PERSONAL: "Personal Information",
         TEXT_EDUCATION: "Education History",
         TEXT_WORK_EXPERIENCE: "Work Experience",
         TEXT_REFERENCES: "References",
+        TEXT_COPY_CODE: "Copy Code",
 
         // PERSONAL
         TEXT_NAME: "Name",
@@ -45,8 +49,10 @@ export default Object.freeze({
         TEXT_EDUCATION_ITEM_DETAIL_2: "Chumphol Phonphisai School, Nongkhai THAILAND",
 
         // EXPERIENCE
-        TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (May 2021 - Present)",
-        TEXT_WORK_EXPERIENCE_POSITION_1: "Front-end Developer",
+        TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (Dec 2020 - Mar 2021) (Intern)",
+        TEXT_WORK_EXPERIENCE_POSITION_1: "Android Developer",
+        TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (May 2021 - Present)",
+        TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer",
         TEXT_WORK_EXPERIENCE_PROJECT_1: "ttb Smart Shop",
         TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ Develop ttb smartshop merchant application from version 2.x.x to version 3.x.x (re-branding)",
         TEXT_WORK_EXPERIENCE_DETAIL_1_2: "✓ Add and edit functionality within the app",
