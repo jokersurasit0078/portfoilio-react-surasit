@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import About from "./page/about/About";
 import Contact from "./page/contact/Contact";
 import Skill from "./page/skill/Skill";
+import Generate from "./page/generate/Generate";
 
 declare const window: any;
 
@@ -27,6 +28,7 @@ function AppRouter() {
         <Route path={path.about.url} element={<About />} />
         <Route path={path.contact.url} element={<Contact />} />
         <Route path={path.skill.url} element={<Skill />} />
+        <Route path={path.generate.url} element={<Generate />} />
       </Routes>
     </BrowserRouter>
   );

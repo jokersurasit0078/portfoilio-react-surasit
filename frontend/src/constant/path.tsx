@@ -19,4 +19,9 @@ export default Object.freeze({
         route: "/contact",
         url: "/contact",
     },
+    generate: {
+        name: "Generate",
+        route: "/generate-component",
+        url: "/generate-component",
+    },
 });

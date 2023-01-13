@@ -17,6 +17,7 @@ import BuildCircleIcon from "@mui/icons-material/BuildCircle";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 import RestartAltIcon from "@mui/icons-material/RestartAlt";
+import CheckIcon from "@mui/icons-material/Check";
 
 interface ICustomIconProps {
     name: string;
@@ -50,5 +51,6 @@ export default function CustomIcon(props: ICustomIconProps) {
     else if (name === "right") return <ArrowRightIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber }} />;
     else if (name === "left") return <ArrowLeftIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber }} />;
     else if (name === "reset") return <RestartAltIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber }} />;
+    else if (name === "confirm") return <CheckIcon fontSize={size} sx={{ color: color, width: sizeNumber, height: sizeNumber }} />;
     else return <ErrorIcon fontSize={size} />;
 }
