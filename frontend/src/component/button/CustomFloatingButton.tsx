@@ -9,8 +9,8 @@ export default function CustomFloatingButton() {
     const [scrollPosition, setScrollPosition] = useState<number>(0);
 
     useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const handleScroll = () => {

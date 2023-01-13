@@ -31,6 +31,7 @@ export default function CustomAppbar() {
         { text: word().MENU_2, icon: "about", url: path.about.url },
         { text: word().MENU_3, icon: "skill", url: path.skill.url },
         { text: word().MENU_4, icon: "contact", url: path.contact.url },
+        { text: word().MENU_5, icon: "generate", url: path.generate.url },
     ];
 
     useEffect(() => {
@@ -80,7 +81,7 @@ export default function CustomAppbar() {
                     }}
                 >
                     <img src={portfolio} alt="portfolio" width={"40px"} height={"40px"} />
-                    <Typography sx={{ fontSize: themes.fontsize.subHeader, fontWeight: "bold", paddingLeft: "5px", color: themes.color.mainText }}>Portfolio</Typography>
+                    <Typography sx={{ fontSize: themes.fontsize.subHeader, fontWeight: "bold", pl: "5px", color: themes.color.mainText }}>Portfolio</Typography>
                 </Grid>
             </Toolbar>
             <List>
@@ -133,14 +134,14 @@ export default function CustomAppbar() {
                             direction={"column"}
                             justifyContent={"center"}
                             alignItems={"center"}
-                            sx={{ paddingTop: "5px", paddingBottom: "5px", cursor: "pointer" }}
+                            sx={{ pt: "5px", pb: "5px", cursor: "pointer" }}
                             onClick={() => handleMenuSideBar(item.url)}
                         >
                             <IconButton
                                 size="large"
                                 color="inherit"
                                 aria-label="menu"
-                                sx={{ padding: "5px" }}
+                                sx={{ p: "5px" }}
                             >
                                 <CustomIcon name={item.icon} color={themes.color.mainText} />
                             </IconButton>
@@ -202,7 +203,7 @@ export default function CustomAppbar() {
                                     justifyContent={"flex-start"}
                                     alignItems={"center"}
                                     onClick={() => handleChangeLanguage(item.value)}
-                                    sx={{ height: "30px", paddingRight: "10px", paddingLeft: "10px", cursor: "pointer" }}
+                                    sx={{ height: "30px", pr: "10px", pl: "10px", cursor: "pointer" }}
                                     id={"BT_ARROW_ITEM_" + (item.text).toUpperCase()}
                                 >
                                     <img src={item.icon} alt="portfolio" width={"20px"} height={"20px"} style={{ padding: "2px", paddingRight: "6px" }} />
@@ -215,13 +216,13 @@ export default function CustomAppbar() {
                             container
                             justifyContent={"flex-start"}
                             alignItems={"center"}
-                            sx={{ height: "30px", paddingRight: "10px", paddingLeft: "10px" }}
+                            sx={{ height: "30px", pr: "10px", pl: "10px" }}
                         >
                             <Button
                                 id={"BT_ARROW_ITEM_CALL_ME_NOW"}
                                 variant={"text"}
                                 size={"small"}
-                                sx={{ textTransform: "none", padding: "0px", paddingLeft: "5px", color: themes.color.mainText, fontSize: themes.fontsize.small }}
+                                sx={{ textTransform: "none", p: "0px", pl: "5px", color: themes.color.mainText, fontSize: themes.fontsize.small }}
                                 onClick={handleCloseArrowMenu}
                                 href={phoneContact}
                                 startIcon={<CustomIcon name={"phone"} color={themes.color.mainText} sizeNumber={22} />}
@@ -244,7 +245,7 @@ export default function CustomAppbar() {
                 >
                     <Grid
                         sx={{
-                            padding: "5px",
+                            p: "5px",
                             borderRadius: themes.radius,
                             bgcolor: themes.color.hover,
                             boxShadow: themes.shadow,
@@ -261,7 +262,7 @@ export default function CustomAppbar() {
                             onClick={() => handleChangeLanguage(window.LIST_LANGUAGES[0].value)}
                             color="inherit"
                             sx={{
-                                padding: "5px",
+                                p: "5px",
                                 mr: "0px",
                             }}
                         >
@@ -277,7 +278,7 @@ export default function CustomAppbar() {
                             onClick={() => handleChangeLanguage(window.LIST_LANGUAGES[1].value)}
                             color="inherit"
                             sx={{
-                                padding: "5px",
+                                p: "5px",
                                 mr: "0px",
                             }}
                         >
@@ -309,7 +310,7 @@ export default function CustomAppbar() {
                     boxShadow: "none"
                 }}
             >
-                <Grid container direction={"row"} justifyContent={"flex-start"} alignItems={"center"} sx={{ height: themes.appbarHeight, paddingRight: "10px" }}>
+                <Grid container direction={"row"} justifyContent={"flex-start"} alignItems={"center"} sx={{ height: themes.appbarHeight, pr: "10px" }}>
                     <IconButton
                         size="large"
                         color="inherit"
@@ -332,7 +333,7 @@ export default function CustomAppbar() {
                             }}
                         >
                             <img src={portfolio} alt="portfolio" width={"40px"} height={"40px"} />
-                            <Typography sx={{ fontSize: themes.fontsize.subHeader, fontWeight: "bold", paddingLeft: "3px" }}>Portfolio</Typography>
+                            <Typography sx={{ fontSize: themes.fontsize.subHeader, fontWeight: "bold", pl: "3px" }}>Portfolio</Typography>
                         </Grid>
                         {renderAppbarRightMenu()}
                     </Grid>

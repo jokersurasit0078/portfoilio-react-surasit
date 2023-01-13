@@ -11,7 +11,7 @@ export default function Footer() {
             justifyContent={"center"}
             alignItems={"center"}
             sx={{
-                marginTop: `${themes.marginComponent}px`,
+                mt: `${themes.marginComponent}px`,
                 width: "100%",
             }}
             onClick={() => window.open(urlGithub)}
@@ -22,8 +22,8 @@ export default function Footer() {
                     fontSize: themes.fontsize.mini,
                     color: themes.color.hover,
                     "&:hover": {
-                        paddingLeft: `${themes.marginComponent / 3}px`,
-                        paddingRight: `${themes.marginComponent / 3}px`,
+                        pl: `${themes.marginComponent / 3}px`,
+                        pr: `${themes.marginComponent / 3}px`,
                         bgcolor: themes.color.hover,
                         borderRadius: themes.radius,
                         color: themes.color.mainText,

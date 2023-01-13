@@ -25,7 +25,7 @@ export default function CustomHeader(props: ICustomHeaderProps) {
             alignItems={"center"}
             sx={{
                 width: { xs: "90%", lg: width },
-                marginTop: `${themes.marginComponent / 2}px`,
+                mt: `${themes.marginComponent / 2}px`,
             }}
         >
             <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.header }, color: color, fontWeight: "bold" }}>
