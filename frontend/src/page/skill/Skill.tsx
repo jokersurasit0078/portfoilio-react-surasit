@@ -9,6 +9,9 @@ export default function Skill() {
     const listCodeEditor = [
         "Visual Studio Code"
     ];
+    const listVersionControl = [
+        "Sourcetree (GitHub, BitBucket)"
+    ];
     const listProgramingLanguageBase = [
         "Html", "CSS", "JavaScript / TypeScript", "Dart"
     ];
@@ -85,8 +88,11 @@ export default function Skill() {
                         boxShadow: themes.shadow
                     }}
                 >
-                    {renderSubheader("Code Editor")}
+                    {renderSubheader("Code Editor / IDE")}
                     {renderItemSkill(listCodeEditor)}
+                    <CustomDivider />
+                    {renderSubheader("Git / Version Control")}
+                    {renderItemSkill(listVersionControl)}
                     <CustomDivider />
                     {renderSubheader(`Programing Languages (${word().TEXT_BASE})`)}
                     {renderItemSkill(listProgramingLanguageBase)}
