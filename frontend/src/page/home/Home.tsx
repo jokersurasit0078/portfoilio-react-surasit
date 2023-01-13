@@ -40,25 +40,25 @@ export default function Home() {
 
     const renderTextProfile = (xs: string, md: string) => {
         return (
-            <Grid item xs={7} container direction={"column"} columns={{ xs: 2, md: 12 }} sx={{ display: { xs: xs, md: md }, marginTop: { xs: `${themes.marginComponent / 2}px`, md: 0 } }}>
-                <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", color: themes.color.mainText, marginBottom: `${themes.marginComponent / 6}px` }}>
+            <Grid item xs={7} container direction={"column"} columns={{ xs: 2, md: 12 }} sx={{ display: { xs: xs, md: md }, mt: { xs: `${themes.marginComponent / 2}px`, md: 0 } }}>
+                <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", color: themes.color.mainText, mb: `${themes.marginComponent / 6}px` }}>
                     {word().TEXT_PROFILE_NAME}
                 </Typography>
-                <Grid container direction={"row"} sx={{ marginBottom: `${themes.marginComponent / 4}px` }}>
-                    <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", color: themes.color.mainText, bgcolor: themes.color.main, paddingLeft: "10px", paddingRight: "10px", borderRadius: themes.radius }}>
+                <Grid container direction={"row"} sx={{ mb: `${themes.marginComponent / 4}px` }}>
+                    <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", color: themes.color.mainText, bgcolor: themes.color.main, pl: "10px", pr: "10px", borderRadius: themes.radius }}>
                         Front-end
                     </Typography>
-                    <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", paddingLeft: "7px", color: themes.color.mainText }}>
+                    <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", pl: "7px", color: themes.color.mainText }}>
                         Developer
                     </Typography>
                 </Grid>
-                <Typography sx={{ fontSize: themes.fontsize.default, color: themes.color.mainText, marginBottom: `${themes.marginComponent / 4}px` }}>
+                <Typography sx={{ fontSize: themes.fontsize.default, color: themes.color.mainText, mb: `${themes.marginComponent / 4}px` }}>
                     {word().TEXT_PROFILE_DETAIL_1}
                 </Typography>
-                <Typography sx={{ fontSize: themes.fontsize.small, color: themes.color.mainText, marginBottom: `${themes.marginComponent / 4}px` }}>
+                <Typography sx={{ fontSize: themes.fontsize.small, color: themes.color.mainText, mb: `${themes.marginComponent / 4}px` }}>
                     {word().TEXT_PROFILE_DETAIL_2}
                 </Typography>
-                <Grid container direction={"row"} sx={{ maxWidth: "100%", marginBottom: `${themes.marginComponent / 4}px` }}>
+                <Grid container direction={"row"} sx={{ maxWidth: "100%", mb: `${themes.marginComponent / 4}px` }}>
                     {listImg.map((item: any, index: number) => {
                         return (
                             <Grid
@@ -68,13 +68,13 @@ export default function Home() {
                                 justifyContent={"center"}
                                 alignItems={"center"}
                                 sx={{
-                                    padding: `${themes.marginComponent / 4}px`,
+                                    p: `${themes.marginComponent / 4}px`,
                                     bgcolor: "white",
                                     borderRadius: "10px",
                                     width: item.width + 20,
                                     height: 60,
-                                    marginRight: index !== listImg.length - 1 ? `${themes.marginComponent / 4}px` : 0,
-                                    marginBottom: index !== listImg.length - 1 ? `${themes.marginComponent / 4}px` : 0,
+                                    mr: index !== listImg.length - 1 ? `${themes.marginComponent / 4}px` : 0,
+                                    mb: index !== listImg.length - 1 ? `${themes.marginComponent / 4}px` : 0,
                                     boxShadow: themes.shadow
                                 }}
                             >
@@ -91,7 +91,7 @@ export default function Home() {
                     })}
                 </Grid>
                 <Grid container direction={"row"} alignItems={"center"} sx={{ maxWidth: "100%" }}>
-                    <Typography sx={{ fontSize: themes.fontsize.small, color: themes.color.mainText, paddingRight: `${themes.marginComponent / 4}px` }}>
+                    <Typography sx={{ fontSize: themes.fontsize.small, color: themes.color.mainText, pr: `${themes.marginComponent / 4}px` }}>
                         {word().TEXT_PROFILE_DETAIL_3}
                     </Typography>
                     <Button
@@ -129,8 +129,8 @@ export default function Home() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: `${themes.marginComponent / 2}px`,
-                        padding: `${themes.marginComponent}px`,
+                        mt: `${themes.marginComponent / 2}px`,
+                        p: `${themes.marginComponent}px`,
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
@@ -158,7 +158,7 @@ export default function Home() {
     return (
         <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
-            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
+            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, pt: themes.appbarHeight }}>
                 <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>
                     {renderProfile()}
                     <Footer />

@@ -25,8 +25,9 @@ export default function Contact() {
     const handleClickItemContact = async (text: string) => {
         const action = text.toUpperCase();
         if (action === "GMAIL") {
-            await navigator.clipboard.writeText(listContact[0].detail);
-            setOpenAlert(true);
+            // await navigator.clipboard.writeText(listContact[0].detail);
+            // setOpenAlert(true);
+            window.open(`mailto:${listContact[0].detail}`, '_self');
         } else if (action === "FACEBOOK") {
             window.open("https://www.facebook.com/surasit.suwannara");
         } else if (action === "INSTAGRAM") {
@@ -91,8 +92,8 @@ export default function Contact() {
                         bgcolor: chip.length === 1 ? chip[0] : "",
                         borderTopLeftRadius: "40px",
                         borderBottomLeftRadius: "40px",
-                        paddingTop: { xs: `${themes.marginComponent / 4}px`, md: `${themes.marginComponent / 3}px` },
-                        paddingBottom: { xs: `${themes.marginComponent / 4}px`, md: `${themes.marginComponent / 3}px` },
+                        pt: { xs: `${themes.marginComponent / 4}px`, md: `${themes.marginComponent / 3}px` },
+                        pb: { xs: `${themes.marginComponent / 4}px`, md: `${themes.marginComponent / 3}px` },
                     }}
                 >
                     <Grid
@@ -101,7 +102,7 @@ export default function Contact() {
                         alignItems={"center"}
                         sx={{
                             borderRadius: `${size}px`,
-                            padding: `${themes.marginComponent / 3}px`,
+                            p: `${themes.marginComponent / 3}px`,
                             bgcolor: "white",
                             width: `${size * 2}px`,
                             height: `${size * 2}px`,
@@ -125,8 +126,8 @@ export default function Contact() {
                     alignItems={"center"}
                     sx={{
                         height: "100%",
-                        paddingLeft: `${themes.marginComponent / 3}px`,
-                        paddingRight: `${themes.marginComponent / 1.5}px`
+                        pl: `${themes.marginComponent / 3}px`,
+                        pr: `${themes.marginComponent / 1.5}px`
                     }}
                     wrap='nowrap'
                 >
@@ -139,7 +140,7 @@ export default function Contact() {
                         wrap='nowrap'
                         textOverflow={"ellipsis"}
                     >
-                        <Typography sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: "black", paddingLeft: "3px", fontWeight: "bold" }}>
+                        <Typography sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: "black", pl: "3px", fontWeight: "bold" }}>
                             {detail}
                         </Typography>
                     </Grid>
@@ -152,7 +153,7 @@ export default function Contact() {
                                 width: "30px",
                                 backgroundImage: chip.length === 2 ? `linear-gradient(90deg, ${chip[0]}, ${chip[1]})` : "",
                                 bgcolor: chip.length === 1 ? chip[0] : "",
-                                padding: "5px",
+                                p: "5px",
                                 borderRadius: "50%",
                             }}
                         >
@@ -176,13 +177,12 @@ export default function Contact() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: `${themes.marginComponent / 2}px`,
-                        padding: `${themes.marginComponent / 2}px`,
+                        mt: `${themes.marginComponent / 2}px`,
+                        p: `${themes.marginComponent / 2}px`,
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
                 >
-
                     {listContact.map((item: any, index: number) => {
                         return <Fade in={true} timeout={{ enter: (index + 1) * 500, exit: 200 }}>
                             {renderItemContact(
@@ -207,8 +207,8 @@ export default function Contact() {
     return (
         <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
-            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
-                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>
+            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, pt: themes.appbarHeight }}>
+                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ pb: `${themes.marginComponent}px` }}>
                     <CustomHeader text={word().MENU_4} />
                     {renderContact()}
                     <Footer />

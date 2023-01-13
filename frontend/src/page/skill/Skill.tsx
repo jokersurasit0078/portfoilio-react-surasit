@@ -79,8 +79,8 @@ export default function Skill() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: `${themes.marginComponent / 2}px`,
-                        padding: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        mt: `${themes.marginComponent / 2}px`,
+                        p: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
@@ -107,8 +107,8 @@ export default function Skill() {
     return (
         <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
-            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
-                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>
+            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, pt: themes.appbarHeight }}>
+                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ pb: `${themes.marginComponent}px` }}>
                     <CustomHeader text={word().MENU_3} />
                     {renderSkill()}
                     <Footer />

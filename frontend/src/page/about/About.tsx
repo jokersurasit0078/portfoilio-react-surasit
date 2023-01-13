@@ -57,8 +57,8 @@ export default function About() {
                 justifyContent={"flex-start"}
                 alignItems={"center"}
                 sx={{
-                    paddingLeft: `${themes.marginComponent / 2}px`,
-                    paddingRight: `${themes.marginComponent / 3}px`,
+                    pl: `${themes.marginComponent / 2}px`,
+                    pr: `${themes.marginComponent / 3}px`,
                     mb: mb ? `${themes.marginComponent / 6}px` : 0,
                 }}
             >
@@ -79,8 +79,8 @@ export default function About() {
                 justifyContent={"flex-start"}
                 alignItems={"center"}
                 sx={{
-                    paddingLeft: `${themes.marginComponent / 2}px`,
-                    paddingRight: `${themes.marginComponent / 3}px`,
+                    pl: `${themes.marginComponent / 2}px`,
+                    pr: `${themes.marginComponent / 3}px`,
                     mb: mb ? `${themes.marginComponent / 6}px` : 0,
                 }}
                 onClick={() => url ? window.open(url) : {}}
@@ -97,7 +97,7 @@ export default function About() {
                             color: themes.color.mainText,
                             fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default },
                             cursor: url ? "pointer" : "",
-                            padding: 0,
+                            p: 0,
                             "&:hover": {
                                 bgcolor: themes.color.hover,
                                 opacity: 0.8
@@ -131,8 +131,8 @@ export default function About() {
                 alignItems={"center"}
                 onClick={() => url ? window.open(url) : {}}
                 sx={{
-                    paddingLeft: chip ? `${themes.marginComponent / 2}px` : `${themes.marginComponent - 5}px`,
-                    paddingRight: `${themes.marginComponent / 3}px`,
+                    pl: chip ? `${themes.marginComponent / 2}px` : `${themes.marginComponent - 5}px`,
+                    pr: `${themes.marginComponent / 3}px`,
                     mb: mb ? `${themes.marginComponent / 6}px` : 0,
                 }}
             >
@@ -143,7 +143,7 @@ export default function About() {
                                 opacity: url ? 0.8 : 1,
                                 cursor: url ? "pointer" : ""
                             },
-                            paddingRight: url ? `${themes.marginComponent / 3}px` : 0
+                            pr: url ? `${themes.marginComponent / 3}px` : 0
                         }}
                         variant={"outlined"}
                         onDelete={() => { }}
@@ -187,8 +187,8 @@ export default function About() {
                 alignItems={"center"}
                 onClick={() => window.open(`tel:${phone}`, '_self')}
                 sx={{
-                    paddingLeft: `${themes.marginComponent / 2}px`,
-                    paddingRight: `${themes.marginComponent / 3}px`,
+                    pl: `${themes.marginComponent / 2}px`,
+                    pr: `${themes.marginComponent / 3}px`,
                     mb: mb ? `${themes.marginComponent / 6}px` : 0,
                     "&:hover": { cursor: "pointer", opacity: 0.8 }
                 }}
@@ -199,7 +199,7 @@ export default function About() {
                         sx={{
                             fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default },
                             color: themes.color.mainText,
-                            paddingLeft: `${themes.marginComponent / 6}px`
+                            pl: `${themes.marginComponent / 6}px`
                         }}
                     >
                         {title + " : " + detail}
@@ -221,11 +221,11 @@ export default function About() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: `${themes.marginComponent / 2}px`,
-                        paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingLeft: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
-                        paddingRight: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        mt: `${themes.marginComponent / 2}px`,
+                        pt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pb: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pl: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        pr: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
@@ -257,11 +257,11 @@ export default function About() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingLeft: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
-                        paddingRight: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        mt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pb: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pl: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        pr: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
@@ -286,11 +286,11 @@ export default function About() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingLeft: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
-                        paddingRight: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        mt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pb: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pl: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        pr: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
@@ -335,11 +335,11 @@ export default function About() {
                     sx={{
                         width: { xs: "90%", lg: themes.containerWidth },
                         bgcolor: themes.color.hover,
-                        marginTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingTop: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingBottom: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
-                        paddingLeft: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
-                        paddingRight: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        mt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pt: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pb: { xs: `${themes.marginComponent / 2}px`, md: `${themes.marginComponent}px` },
+                        pl: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
+                        pr: { xs: `${themes.marginComponent / 3}px`, md: `${themes.marginComponent}px` },
                         borderRadius: themes.radius,
                         boxShadow: themes.shadow
                     }}
@@ -354,8 +354,8 @@ export default function About() {
     return (
         <Box sx={{ display: "flex", bgcolor: themes.color.bg }}>
             <CustomAppbar />
-            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, paddingTop: themes.appbarHeight }}>
-                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ paddingBottom: `${themes.marginComponent}px` }}>
+            <Box sx={{ flexGrow: 1, width: { xs: "100%", sm: `calc(100% - ${themes.drawerWidth}px)` }, pt: themes.appbarHeight }}>
+                <Grid container direction={"column"} justifyContent={"center"} alignItems={"center"} sx={{ pb: `${themes.marginComponent}px` }}>
                     <CustomHeader text={word().MENU_2} />
                     {renderPersonalInformation()}
                     {renderEducation()}
