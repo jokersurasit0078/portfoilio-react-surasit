@@ -62,7 +62,8 @@ export default function Generate() {
     const [typeSet, setTypeSet] = useState<"SX" | "STYLE">("SX");
     const [sxValue, setSxValue] = useState<any>(defaultSx);
     const [styleValue, setStyleValue] = useState<any>(defaultStyle);
-    const [typeValue, setTypeValue] = useState<any>(sxValue);
+    const [typeValue, setTypeValue] = useState<any>(defaultSx);
+    const typeValueRef: any = useRef();
 
     // STATE RENDER CUSTOM MUI TAG
     const [tag, setTag] = useState<React.ElementType>(Grid);
@@ -131,8 +132,8 @@ export default function Generate() {
     const [sourceCode, setSourceCode] = useState<string>();
 
     useEffect(() => {
-
-    }, []);
+        typeValueRef.current = typeValue;
+    }, [typeValue]);
 
     const setTagFromSelectAction = (targetTag: string) => {
         for (let i = 0; i < listTag.length; i++) {
@@ -295,13 +296,81 @@ export default function Generate() {
 
     const onCloseResetCSS = () => {
         if (typeSet === "SX") {
-            setTypeValue(defaultSx);
-            setSxValue(defaultSx);
+            const defaultNewValue = [
+                { name: "m", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "mt", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "mb", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "ml", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "mr", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "p", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "pt", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "pb", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "pl", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "pr", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "width", use: false, value: "", style: [`"120px"`, `120`, `"20%"`] },
+                { name: "height", use: false, value: "", style: [`"35px"`, `35`, `"10%"`] },
+                { name: "minWidth", use: false, value: "", style: [`"120px"`, `120`, `"20%"`] },
+                { name: "minHeight", use: false, value: "", style: [`"35px"`, `35`, `"10%"`] },
+                { name: "color", use: false, value: "", style: [`"red"`, `"#ff00ef"`] },
+                { name: "bgcolor", use: false, value: "", style: [`"red"`, `"#ff00ef"`] },
+                { name: "backgroundImage", use: false, value: "", style: [`"linear-gradient(90deg, #FCAF45, #E1306C"`] },
+                { name: "border", use: false, value: "", style: [`"1px solid #ffff00"`] },
+                { name: "borderRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderTopLeftRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderTopRightRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderBottomLeftRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderBottomRightRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "boxShadow", use: false, value: "", style: [`"3px 3px 3px #C4C4C4"`] },
+                { name: "textAlign", use: false, value: "", style: [`"left"`, `"center"`, `"right"`] },
+                { name: "textDecoration", use: false, value: "", style: [`"underline"`, `"line-through"`] },
+                { name: "textTransform", use: false, value: "", style: [`"none"`, `"uppercase"`, `"capitalize"`] },
+                { name: "fontSize", use: false, value: "", style: [`"16px"`, `16`] },
+                { name: "fontStyle", use: false, value: "", style: [`"normal"`, `"italic"`] },
+                { name: "fontWeight", use: false, value: "", style: [`"bold"`, `700`] },
+                { name: "opacity", use: false, value: "", style: [`0.3`, `0.8`] },
+                { name: "display", use: false, value: "", style: [`"none"`, `"flex"`, `"block"`] },
+            ];
+            setTypeValue(defaultNewValue);
+            setSxValue(defaultNewValue);
             setSx({});
             setTextSx("");
         } else if (typeSet === "STYLE") {
-            setTypeValue(defaultStyle);
-            setStyleValue(defaultStyle);
+            const defaultNewValue = [
+                { name: "margin", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "marginTop", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "marginBottom", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "marginLeft", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "marginRight", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "padding", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "paddingTop", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "paddingBottom", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "paddingLeft", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "paddingRight", use: false, value: "", style: [`"10px"`, `10`] },
+                { name: "width", use: false, value: "", style: [`"120px"`, `120`, `"20%"`] },
+                { name: "height", use: false, value: "", style: [`"35px"`, `35`, `"10%"`] },
+                { name: "minWidth", use: false, value: "", style: [`"120px"`, `120`, `"20%"`] },
+                { name: "minHeight", use: false, value: "", style: [`"35px"`, `35`, `"10%"`] },
+                { name: "color", use: false, value: "", style: [`"red"`, `"#ff00ef"`] },
+                { name: "bgcolor", use: false, value: "", style: [`"red"`, `"#ff00ef"`] },
+                { name: "backgroundColor", use: false, value: "", style: [`"linear-gradient(90deg, #FCAF45, #E1306C"`] },
+                { name: "border", use: false, value: "", style: [`"1px solid #ffff00"`] },
+                { name: "borderRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderTopLeftRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderTopRightRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderBottomLeftRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "borderBottomRightRadius", use: false, value: "", style: [`"10px"`, `10`, `"50%"`] },
+                { name: "boxShadow", use: false, value: "", style: [`"3px 3px 3px #C4C4C4"`] },
+                { name: "textAlign", use: false, value: "", style: [`"left"`, `"center"`, `"right"`] },
+                { name: "textDecoration", use: false, value: "", style: [`"underline"`, `"line-through"`] },
+                { name: "textTransform", use: false, value: "", style: [`"none"`, `"uppercase"`, `"capitalize"`] },
+                { name: "fontSize", use: false, value: "", style: [`"16px"`, `16`] },
+                { name: "fontStyle", use: false, value: "", style: [`"normal"`, `"italic"`] },
+                { name: "fontWeight", use: false, value: "", style: [`"bold"`, `700`] },
+                { name: "opacity", use: false, value: "", style: [`0.3`, `0.8`] },
+                { name: "display", use: false, value: "", style: [`"none"`, `"flex"`, `"block"`] },
+            ];
+            setTypeValue(defaultNewValue);
+            setStyleValue(defaultNewValue);
             setStyle({});
             setTextStyle("");
         }
@@ -314,24 +383,16 @@ export default function Generate() {
             setSourceCode(`<${strTag}${id ? `\n\tid={"${id}"}` : ""}${textSx ? textSx : ""}${textStyle ? textStyle : ""}${container ? "\n\tcontainer" : ""}${item ? "\n\titem" : ""}${xs ? `\n\txs={${xs}}` : ""}${direction ? `\n\tdirection={"${direction}"}` : ""}${justifyContent ? `\n\tjustifyContent={"${justifyContent}"}` : ""}${alignItems ? `\n\talignItems={"${alignItems}"}` : ""}${wrap ? `\n\twarp={"${wrap}"}` : ""}\n>
 \t${strTag === listTag[2].menu ? `<CustomIcon name={"copy"} color={"black"} />` : `{"${text}"}`}
 </${strTag}>`);
-            // sx
-            // style
         } else if (strTag === listTag[1].menu) {
             setSourceCode(`<${strTag}\n\t${textClick}${id ? `\n\tid={"${id}"}` : ""}${textSx ? textSx : ""}${textStyle ? textStyle : ""}${disabled ? `\n\tdisabled` : ""}${variant ? `\n\tvariant={"${variant}"}` : ""}${size ? `\n\tsize={"${size}"}` : ""}${showStartIcon ? `\n\tstartIcon={${textIcon}}` : ""}${showEndIcon ? `\n\tendIcon={${textIcon}}` : ""}\n>
 \t${strTag === listTag[2].menu ? `<CustomIcon name={"copy"} color={"black"} />` : `{"${text}"}`}
 </${strTag}>`);
-            // sx
-            // style
         } else if (strTag === listTag[2].menu) {
             setSourceCode(`<${strTag}\n\t${textClick}${id ? `\n\tid={"${id}"}` : ""}${textSx ? textSx : ""}${textStyle ? textStyle : ""}${disabled ? `\n\tdisabled` : ""}${size ? `\n\tsize={"${size}"}` : ""}\n>
 \t${strTag === listTag[2].menu ? `<CustomIcon name={"copy"} color={"black"} />` : `{"${text}"}`}
 </${strTag}>`);
-            // sx
-            // style
         } else if (strTag === listTag[3].menu) {
             setSourceCode(`<${strTag}\n\t${textChange}${id ? `\n\tid={"${id}"}` : ""}${textSx ? textSx : ""}${textStyle ? textStyle : ""}${fullWidth ? `\n\tfullWidth` : ""}${value ? `\n\tvalue={"${value}"}` : ""}${disabled ? `\n\tdisabled` : ""}${variant ? `\n\tvariant={"${variant}"}` : ""}${size ? `\n\tsize={"${size}"}` : ""}${error ? `\n\terror={${error}}` : ""}${helperText ? `\n\thelperText={"${helperText}"}` : ""}${placeholder ? `\n\tplaceholder={"${placeholder}"}` : ""}${multiline ? `\n\tmultiline` : ""}${rows ? `\n\trow={${rows}}` : ""}\n/>`);
-            // sx
-            // style
             // inputProps={inputProps}
             // FormHelperTextProps={FormHelperTextProps}
         } else if (strTag === listTag[4].menu) {
@@ -360,7 +421,7 @@ export default function Generate() {
     };
 
     const renderListTag = () => {
-        return <Grid ref={tagRef} container wrap={"nowrap"} justifyContent={"center"} sx={{ width: "70%", overflow: "hidden" }}>
+        return <Grid ref={tagRef} container wrap={"nowrap"} justifyContent={"flex-start"} sx={{ width: "70%", overflow: "hidden" }}>
             {listTag.map((item: any, index: number) => {
                 return (
                     <Chip
@@ -989,7 +1050,7 @@ export default function Generate() {
 
     const renderPopupSetSxOrStyle = () => {
         return (
-            <Dialog onClose={() => onCloseResetCSS()} open={showSetSxOrStyle} aria-labelledby={"popup-set-style"} id={"PP_SET_STYLE"} fullWidth maxWidth="md" sx={{ display: { xs: "none", md: "block" } }}>
+            <Dialog onClose={() => onClosePopupSxOrStyle()} open={showSetSxOrStyle} aria-labelledby={"popup-set-style"} id={"PP_SET_STYLE"} fullWidth maxWidth="md" sx={{ display: { xs: "none", md: "block" } }}>
                 <Paper elevation={0} sx={{ p: `${themes.marginComponent / 2}px`, bgcolor: themes.color.hover }}>
                     <Grid container item xs={12} direction={"column"} justifyContent={"center"} sx={{ p: `${themes.marginComponent / 2}px` }}>
                         <Grid container item xs={12} direction={"row"} justifyContent={"flex-end"} sx={{ mb: `${themes.marginComponent / 3}px`, borderRadius: "5px" }}>
@@ -1059,7 +1120,7 @@ export default function Generate() {
                                             <Checkbox
                                                 id={"CB_SXORSTYLE_" + (item.name).toUpperCase()}
                                                 checked={item.use}
-                                                onChange={() => onClickSxOrStyleValue(item.name, !(item.use), item.value, item.style)}
+                                                onChange={() => onClickSxOrStyleValue(item.name, !(item.use), !(item.use) ? item.style[0] : value, item.style)}
                                                 inputProps={{ "aria-label": "controlled" }}
                                                 sx={{ p: 0, pl: "8px", pr: "4px", color: themes.color.mainText }}
                                             />
