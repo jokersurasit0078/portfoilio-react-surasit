@@ -1,9 +1,9 @@
 import { Box, Chip, Fade, Grid, Typography } from "@mui/material";
-import CustomAppbar from "../../component/appbar/CustomAppbar";
-import themes from "../../constant/themes";
+import CustomAppbar from "../../components/appbar/CustomAppbar";
+import themes from "../../constants/themes";
 import { word } from "../../languages/Word";
-import CustomHeader from "../../component/text/CustomHeader";
-import Footer from "../../component/footer/Footer";
+import CustomHeader from "../../components/text/CustomHeader";
+import Footer from "../../components/footer/Footer";
 
 export default function Skill() {
     const listCodeEditor = [

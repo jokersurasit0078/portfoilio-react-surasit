@@ -1,11 +1,11 @@
-import path from "./constant/path"
+import path from "./constants/path"
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./page/home/Home";
+import Home from "./pages/home/Home";
 import { useEffect } from "react";
-import About from "./page/about/About";
-import Contact from "./page/contact/Contact";
-import Skill from "./page/skill/Skill";
-import Generate from "./page/generate/Generate";
+import About from "./pages/about/About";
+import Contact from "./pages/contact/Contact";
+import Skill from "./pages/skill/Skill";
+import Generate from "./pages/generate/Generate";
 
 declare const window: any;
 

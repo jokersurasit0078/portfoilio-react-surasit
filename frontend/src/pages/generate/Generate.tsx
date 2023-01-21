@@ -1,12 +1,12 @@
 import { Box, Button, Fade, Grid, Typography, TextField, OutlinedInput, Select, InputAdornment, IconButton, MenuItem, Checkbox, FormControlLabel, Chip, Snackbar, Alert, Paper, Dialog, CircularProgress } from "@mui/material";
-import CustomAppbar from "../../component/appbar/CustomAppbar";
-import themes from "../../constant/themes";
+import CustomAppbar from "../../components/appbar/CustomAppbar";
+import themes from "../../constants/themes";
 
 import { word } from "../../languages/Word";
-import Footer from "../../component/footer/Footer";
+import Footer from "../../components/footer/Footer";
 import { useEffect, useRef, useState } from "react";
-import CustomIcon from "../../component/icon/CustomIcon";
-import CustomHeader from "../../component/text/CustomHeader";
+import CustomIcon from "../../components/icon/CustomIcon";
+import CustomHeader from "../../components/text/CustomHeader";
 
 interface Props {
     tag: React.ElementType;

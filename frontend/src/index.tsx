@@ -8,9 +8,9 @@ import { Provider } from "react-redux";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import { ThemeProvider } from "@mui/material";
-import { theme } from "./constant/themeMui";
+import { theme } from "./constants/themeMui";
 import { initializeApp } from "firebase/app";
-import CustomFloatingButton from "./component/button/CustomFloatingButton";
+import CustomFloatingButton from "./components/button/CustomFloatingButton";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDi4HB-OYsYWY99WFnUx_rJvv63EWuQ5-0",

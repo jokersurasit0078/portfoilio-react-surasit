@@ -1,16 +1,16 @@
 import { Alert, Box, Fade, Grid, Snackbar, Typography } from "@mui/material";
-import CustomAppbar from "../../component/appbar/CustomAppbar";
-import themes from "../../constant/themes";
+import CustomAppbar from "../../components/appbar/CustomAppbar";
+import themes from "../../constants/themes";
 import facebookImg from "../../image/facebook.png";
 import instagramImg from "../../image/instagram.png";
 import lineImg from "../../image/line.png";
 import gmailImg from "../../image/gmail.png";
 import telephoneImg from "../../image/telephone.png";
 import { word } from "../../languages/Word";
-import CustomHeader from "../../component/text/CustomHeader";
-import CustomIcon from "../../component/icon/CustomIcon";
+import CustomHeader from "../../components/text/CustomHeader";
+import CustomIcon from "../../components/icon/CustomIcon";
 import { useState } from "react";
-import Footer from "../../component/footer/Footer";
+import Footer from "../../components/footer/Footer";
 
 export default function Contact() {
     const [openAlert, setOpenAlert] = useState<boolean>(false);

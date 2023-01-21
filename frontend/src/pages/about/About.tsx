@@ -1,10 +1,10 @@
 import { Box, Button, Chip, Fade, Grid, Typography } from "@mui/material";
-import CustomAppbar from "../../component/appbar/CustomAppbar";
-import themes from "../../constant/themes";
+import CustomAppbar from "../../components/appbar/CustomAppbar";
+import themes from "../../constants/themes";
 import { word } from "../../languages/Word";
-import CustomHeader from "../../component/text/CustomHeader";
-import Footer from "../../component/footer/Footer";
-import CustomIcon from "../../component/icon/CustomIcon";
+import CustomHeader from "../../components/text/CustomHeader";
+import Footer from "../../components/footer/Footer";
+import CustomIcon from "../../components/icon/CustomIcon";
 
 export default function About() {
     const urlDigio = "https://www.digio.co.th/";

@@ -1,7 +1,7 @@
 
 import { Fab, Fade } from "@mui/material";
 import { useEffect, useState } from "react";
-import themes from "../../constant/themes";
+import themes from "../../constants/themes";
 import CustomIcon from "../icon/CustomIcon";
 
 export default function CustomFloatingButton() {

@@ -1,5 +1,5 @@
 import { Grid, Typography } from "@mui/material";
-import themes from "../../constant/themes";
+import themes from "../../constants/themes";
 
 interface ICustomHeaderProps {
     text: string;

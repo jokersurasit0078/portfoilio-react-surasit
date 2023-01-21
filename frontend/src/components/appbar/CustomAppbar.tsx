@@ -8,11 +8,11 @@ import CustomIcon from "../icon/CustomIcon";
 import portfolio from "../../image/portfolio.png";
 import iconThai from "../../image/icon_thai.png";
 import iconEng from "../../image/icon_eng.png";
-import themes from "../../constant/themes";
+import themes from "../../constants/themes";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { word } from "../../languages/Word";
-import path from "../../constant/path";
+import path from "../../constants/path";
 
 declare const window: any;
 
