@@ -1,12 +1,12 @@
 import { Box, Button, Fade, Grid, Typography } from "@mui/material";
 import CustomAppbar from "../../components/appbar/CustomAppbar";
 import themes from "../../constants/themes";
-import profile from "../../image/profile.jpg";
-import reactImg from "../../image/react.png";
-import firebaseImg from "../../image/firebase.png";
-import reduxImg from "../../image/redux.png";
-import routerImg from "../../image/react_router.png";
-import muiImg from "../../image/mui.png";
+import profile from "../../images/profile.jpg";
+import reactImg from "../../images/react.png";
+import firebaseImg from "../../images/firebase.png";
+import reduxImg from "../../images/redux.png";
+import routerImg from "../../images/react_router.png";
+import muiImg from "../../images/mui.png";
 import { word } from "../../languages/Word";
 import Footer from "../../components/footer/Footer";
 import { useEffect } from "react";

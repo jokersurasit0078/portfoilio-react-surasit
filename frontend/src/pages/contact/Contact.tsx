@@ -1,11 +1,11 @@
 import { Alert, Box, Fade, Grid, Snackbar, Typography } from "@mui/material";
 import CustomAppbar from "../../components/appbar/CustomAppbar";
 import themes from "../../constants/themes";
-import facebookImg from "../../image/facebook.png";
-import instagramImg from "../../image/instagram.png";
-import lineImg from "../../image/line.png";
-import gmailImg from "../../image/gmail.png";
-import telephoneImg from "../../image/telephone.png";
+import facebookImg from "../../images/facebook.png";
+import instagramImg from "../../images/instagram.png";
+import lineImg from "../../images/line.png";
+import gmailImg from "../../images/gmail.png";
+import telephoneImg from "../../images/telephone.png";
 import { word } from "../../languages/Word";
 import CustomHeader from "../../components/text/CustomHeader";
 import CustomIcon from "../../components/icon/CustomIcon";
