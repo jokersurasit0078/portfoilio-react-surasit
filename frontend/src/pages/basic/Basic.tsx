@@ -55,7 +55,7 @@ export default function Basic() {
                 columns={{ xs: 2, md: 12 }}
                 direction={"row"}
                 justifyContent={"flex-start"}
-                alignItems={"center"}
+                alignItems={"flex-start"}
                 wrap={"nowrap"}
                 sx={{
                     pl: `${themes.marginComponent / 2}px`,
@@ -63,10 +63,10 @@ export default function Basic() {
                     mb: mb ? `${themes.marginComponent / 10}px` : 0,
                 }}
             >
-                <Typography noWrap textOverflow={"ellipsis"} sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: themes.color.mainText }}>
+                <Typography sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: themes.color.mainText }}>
                     {title}
                 </Typography>
-                <Typography noWrap textOverflow={"ellipsis"} sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: themes.color.third, pl: `${themes.marginComponent / 3}px` }}>
+                <Typography sx={{ fontSize: { xs: themes.fontsize.small, md: themes.fontsize.default }, color: themes.color.third, pl: `${themes.marginComponent / 3}px` }}>
                     {result ? `// ${result}` : ""}
                 </Typography>
             </Grid>
