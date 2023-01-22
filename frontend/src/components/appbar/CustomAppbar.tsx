@@ -32,6 +32,7 @@ export default function CustomAppbar() {
         { text: word().MENU_3, icon: "skill", url: path.skill.url },
         { text: word().MENU_4, icon: "contact", url: path.contact.url },
         { text: word().MENU_5, icon: "generate", url: path.generate.url },
+        { text: word().MENU_6, icon: "basic", url: path.basic.url },
     ];
 
     useEffect(() => {

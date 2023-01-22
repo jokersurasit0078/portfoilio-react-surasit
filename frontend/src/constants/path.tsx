@@ -24,4 +24,9 @@ export default Object.freeze({
         route: "/generate-component",
         url: "/generate-component",
     },
+    basic: {
+        name: "Basic",
+        route: "/basic-javascript",
+        url: "/basic-javascript",
+    },
 });

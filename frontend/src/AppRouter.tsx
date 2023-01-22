@@ -6,6 +6,7 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import Skill from "./pages/skill/Skill";
 import Generate from "./pages/generate/Generate";
+import Basic from "./pages/basic/Basic";
 
 declare const window: any;
 
@@ -29,6 +30,7 @@ function AppRouter() {
         <Route path={path.contact.url} element={<Contact />} />
         <Route path={path.skill.url} element={<Skill />} />
         <Route path={path.generate.url} element={<Generate />} />
+        <Route path={path.basic.url} element={<Basic />} />
       </Routes>
     </BrowserRouter>
   );

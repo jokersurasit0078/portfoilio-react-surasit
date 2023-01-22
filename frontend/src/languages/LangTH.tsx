@@ -5,9 +5,10 @@ export default Object.freeze({
         MENU_3: "ทักษะ/เครื่องมือที่ใช้",
         MENU_4: "ติดต่อ",
         MENU_5: "สร้างคอมโพเนนต์",
+        MENU_6: "พื้นฐาน JavaScript",
 
         TEXT_PROFILE_NAME: "สวัสดีครับ, ผมชื่อนายสุรสิทธิ์ สุวรรณระ (โจ๊กเกอร์)",
-        TEXT_PROFILE_DETAIL_1: "ผมเป็น Front-end Developer ที่ใช้ React ในการพัฒนาเว็บไซต์ โดยมีประสบการณ์มากกว่า 2 ปี",
+        TEXT_PROFILE_DETAIL_1: "ผมเป็น Front-end Developer ที่ใช้ React และ React Native ในการพัฒนา โดยมีประสบการณ์มากกว่า 2 ปี",
         TEXT_PROFILE_DETAIL_2: "เว็บไซต์นี้สร้างขึ้นโดยใช้เครื่องมือดังนี้ :",
         TEXT_PROFILE_DETAIL_3: "Repository ของเว็บไซต์นี้ :",
         TEXT_CALL_ME_NOW: "ติดต่อเดี๋ยวนี้",

@@ -5,7 +5,7 @@ export default Object.freeze({
         second: "#ff8080",
         third: "#ffb3b3",
         // STYLE BACKGROUND AND HOVER
-        bg: "#333333",
+        bg: "#262626",
         hover: "#808080",
         // TEXT
         mainText: "white",

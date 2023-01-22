@@ -5,9 +5,10 @@ export default Object.freeze({
         MENU_3: "Skill/Tools",
         MENU_4: "Contact",
         MENU_5: "Generate Component",
+        MENU_6: "Basic JavaScript",
 
         TEXT_PROFILE_NAME: "Hello, I'm Surasit Suwannara (Joker)",
-        TEXT_PROFILE_DETAIL_1: "I'm a front-end developer using React in development with over 2 years of experience.",
+        TEXT_PROFILE_DETAIL_1: "I'm a front-end developer using React and React Native in development with over 2 years of experience.",
         TEXT_PROFILE_DETAIL_2: "This website was created using the following tools:",
         TEXT_PROFILE_DETAIL_3: "Repository of this website :",
         TEXT_CALL_ME_NOW: "Call me now",
