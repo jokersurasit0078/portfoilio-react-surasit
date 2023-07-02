@@ -28,7 +28,6 @@ export default Object.freeze({
         TEXT_NAME: "Name",
         TEXT_NAME_DETAIL: "Mr.Surasit Suwannara (Joker)",
         TEXT_ADDRESS: "Residential Address",
-        TEXT_ADDRESS_DETAIL: "888 Moo 8 Rattanathibech 24 Alley, Tambon Bang Kraso, Mueang Nonthaburi District, Nonthaburi 11000",
         TEXT_MOBILE: "Mobile",
         TEXT_MOBILE_DETAIL: "087-223-7007",
         TEXT_EMAIL: "Email",
@@ -52,8 +51,10 @@ export default Object.freeze({
         // EXPERIENCE
         TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (Dec 2020 - Mar 2021) (Intern)",
         TEXT_WORK_EXPERIENCE_POSITION_1: "Android Developer",
-        TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (May 2021 - Present)",
-        TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer",
+        TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (May 2021 - Apr 2023)",
+        TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer (Mobile & Web)",
+        TEXT_WORK_EXPERIENCE_ITEM_3: "PTT Digital Solutions Company Limited (May 2021 - Present",
+        TEXT_WORK_EXPERIENCE_POSITION_3: "Mobile Developer (Flutter)",
         TEXT_WORK_EXPERIENCE_PROJECT_1: "ttb Smart Shop",
         TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ Develop ttb smartshop merchant application from version 2.x.x to version 3.x.x (re-branding)",
         TEXT_WORK_EXPERIENCE_DETAIL_1_2: "✓ Add and edit functionality within the app",
@@ -69,6 +70,9 @@ export default Object.freeze({
         TEXT_WORK_EXPERIENCE_PROJECT_5: "DOS - Marlin",
         TEXT_WORK_EXPERIENCE_DETAIL_5_1: "Web application for storing edc card reader's data Keep history of change of edc card reader's data. This web application can create tasks and assign tasks to technicians. There is a web page for call centers that are used on computers and a team of technicians that are used mobile phones",
         TEXT_WORK_EXPERIENCE_DETAIL_5_2: "✓ Develop website pages as designed by UX/UI designers and connect APIs.",
+        TEXT_WORK_EXPERIENCE_PROJECT_6: "Jupiter Application",
+        TEXT_WORK_EXPERIENCE_DETAIL_6_1: "Electric vehicle charging application",
+        TEXT_WORK_EXPERIENCE_DETAIL_6_2: "✓ Develop applications as designed by UX/UI Designer and connect APIs",
 
         // REFERENCE
         TEXT_REFERENCE_ITEM_1: "Miss. Saranya Tapang (064-219-6390)",

@@ -49,7 +49,7 @@ export default function Home() {
                         Front-end
                     </Typography>
                     <Typography sx={{ fontSize: { xs: themes.fontsize.large, md: themes.fontsize.subHeader }, fontWeight: "bold", pl: "7px", color: themes.color.mainText }}>
-                        Developer
+                        Developer (Mobile & Web)
                     </Typography>
                 </Grid>
                 <Typography sx={{ fontSize: themes.fontsize.default, color: themes.color.mainText, mb: `${themes.marginComponent / 4}px` }}>

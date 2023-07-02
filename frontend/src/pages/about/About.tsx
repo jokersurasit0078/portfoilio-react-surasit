@@ -7,6 +7,7 @@ import Footer from "../../components/footer/Footer";
 import CustomIcon from "../../components/icon/CustomIcon";
 
 export default function About() {
+    const urlPtt = "https://www1.pttdigital.com/home/";
     const urlDigio = "https://www.digio.co.th/";
     const urlTtbSmartShop = "https://www.ttbbank.com/th/sme/sme-account-and-domestic-transaction/sme-collection-service/ttb-smart-shop";
     const urlEwht = "https://www.kasikornbank.com/en/business/cash-management/e-service-payment/pages/e-withholding-tax.aspx";
@@ -19,10 +20,10 @@ export default function About() {
         const birthMonth = 5;
         const birthDate = 11;
         const yearNow = new Date().getFullYear();
-        const monthNow = new Date().getMonth();
+        const monthNow = new Date().getMonth() + 1;
         const dateNow = new Date().getDate();
         age = yearNow - birthYear - 1;
-        if (monthNow >= birthMonth && dateNow >= birthDate) age = age + 1;
+        if (monthNow > birthMonth || (monthNow === birthMonth && dateNow >= birthDate)) age = age + 1;
         return age.toString();
     }
 
@@ -232,7 +233,7 @@ export default function About() {
                 >
                     {renderRowHeader(word().TEXT_PERSONAL)}
                     {renderRowDetail(12, word().TEXT_NAME, word().TEXT_NAME_DETAIL, true)}
-                    {renderRowDetail(12, word().TEXT_ADDRESS, word().TEXT_ADDRESS_DETAIL, true)}
+                    {/* {renderRowDetail(12, word().TEXT_ADDRESS, word().TEXT_ADDRESS_DETAIL, true)} */}
                     {renderRowDetail(6, word().TEXT_MOBILE, word().TEXT_MOBILE_DETAIL, true)}
                     {renderRowDetail(6, word().TEXT_EMAIL, word().TEXT_EMAIL_DETAIL, true)}
                     {renderRowDetail(6, word().TEXT_BIRTHDATE, word().TEXT_BIRTHDATE_DETAIL, true)}
@@ -296,8 +297,12 @@ export default function About() {
                     }}
                 >
                     {renderRowHeader(word().TEXT_WORK_EXPERIENCE)}
-                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_1, urlDigio, true)}
-                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_1, null)}
+                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_3, urlPtt, true)}
+                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_3, null)}
+                    <CustomDivider />
+                    {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_PROJECT_6, null, true, true)}
+                    {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_6_1, null, false, true)}
+                    {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_6_2, null, false)}
                     <CustomDivider />
                     {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_2, urlDigio, true)}
                     {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_2, null)}
@@ -321,6 +326,10 @@ export default function About() {
                     {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_PROJECT_5, null, true, true)}
                     {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_5_1, null, false, true)}
                     {renderRowDetailForWorkExperience(word().TEXT_WORK_EXPERIENCE_DETAIL_5_2, null, false)}
+                    <CustomDivider />
+                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_ITEM_1, urlDigio, true)}
+                    {renderRowHeaderForWorkExperience(word().TEXT_WORK_EXPERIENCE_POSITION_1, null)}
+                    
                 </Grid>
             </Fade>
         );

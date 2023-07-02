@@ -28,7 +28,6 @@ export default Object.freeze({
         TEXT_NAME: "ชื่อ",
         TEXT_NAME_DETAIL: "นายสุรสิทธิ์ สุวรรณระ (โจ๊กเกอร์)",
         TEXT_ADDRESS: "ที่อยู่",
-        TEXT_ADDRESS_DETAIL: "888 หมู่ 8 ซอยรัตนาธิเบศร์ 24, บางกระสอ, อำเภอเมืองนนทบุรี, จังหวัดนนทบุรี, 11000",
         TEXT_MOBILE: "เบอร์โทรศัพท์มือถือ",
         TEXT_MOBILE_DETAIL: "087-223-7007",
         TEXT_EMAIL: "อีเมล์",
@@ -52,8 +51,10 @@ export default Object.freeze({
         // EXPERIENCE
         TEXT_WORK_EXPERIENCE_ITEM_1: "DIGIO (THAILAND) CO., LTD. (ธ.ค. 2563 - มี.ค 2564) (ฝึกสหกิจ)",
         TEXT_WORK_EXPERIENCE_POSITION_1: "Front-end Developer",
-        TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (พ.ค. 2564 - ปัจจุบัน)",
-        TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer",
+        TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (พ.ค. 2564 - เม.ย. 2566)",
+        TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer (Mobile & Web)",
+        TEXT_WORK_EXPERIENCE_ITEM_3: "PTT Digital Solutions Company Limited (พ.ค. 2566 - ปัจจุบัน)",
+        TEXT_WORK_EXPERIENCE_POSITION_3: "Mobile Developer (Flutter)",
         TEXT_WORK_EXPERIENCE_PROJECT_1: "ttb Smart Shop",
         TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ พัฒนาหน้าแอปพลิเคชั่น จากเวอร์ชั่น 2.x.x เป็น เวอร์ชั่น 3.x.x (re-branding)",
         TEXT_WORK_EXPERIENCE_DETAIL_1_2: "✓ เพิ่มและแก้ไขฟังก์ชั่นการทำงานภายในแอป",
@@ -69,6 +70,9 @@ export default Object.freeze({
         TEXT_WORK_EXPERIENCE_PROJECT_5: "DOS - Marlin",
         TEXT_WORK_EXPERIENCE_DETAIL_5_1: "เว็บแอปพลิเคชันสำหรับเก็บข้อมูลของเครื่องรูดบัตร EDC เก็บประวัติการเปลี่ยนแปลงข้อมูลของเครื่องรูดบัตร EDC. เว็บแอปพลิเคชันนี้สามารถสร้างงานและมอบหมายงานให้กับช่างได้. มีหน้าเว็บสำหรับคอลเซ็นเตอร์ที่ใช้บนคอมพิวเตอร์ และทีมช่างที่ใช้บนมือถือ",
         TEXT_WORK_EXPERIENCE_DETAIL_5_2: "✓ พัฒนาหน้าเว็บไซต์ตามที่ UX/UI Designer ได้ออกแบบไว้และเชื่อมต่อ Api",
+        TEXT_WORK_EXPERIENCE_PROJECT_6: "Jupiter Application",
+        TEXT_WORK_EXPERIENCE_DETAIL_6_1: "แอปพลิเคชันสำหรับชาร์จรถยนต์ไฟฟ้า",
+        TEXT_WORK_EXPERIENCE_DETAIL_6_2: "✓ พัฒนาแอปพลิเคชันตามที่ UX/UI Designer ได้ออกแบบไว้และเชื่อมต่อ Api",
 
         // REFERENCE
         TEXT_REFERENCE_ITEM_1: "นางสาวศรัณญา ตะพัง (064-219-6390)",

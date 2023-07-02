@@ -22,7 +22,7 @@ export default function Skill() {
         "React", "React Native", "Flutter",
     ]
     const listLibrary = [
-        "MUI", "Tailwind CSS", "Redux", "Axios", "React Router", "Firebase hosting (Flutter / React)", "Firebase firestore (Flutter)"
+        "MUI", "Tailwind CSS", "Redux", "Axios", "React Router", "Firebase hosting (Flutter / React)", "Firebase firestore (Flutter)", "Firebase notification (Flutter)", "Cubit"
     ];
 
     const CustomDivider = (prosp: any) => {
