@@ -53,7 +53,7 @@ export default Object.freeze({
         TEXT_WORK_EXPERIENCE_POSITION_1: "Android Developer",
         TEXT_WORK_EXPERIENCE_ITEM_2: "DIGIO (THAILAND) CO., LTD. (May 2021 - Apr 2023)",
         TEXT_WORK_EXPERIENCE_POSITION_2: "Front-end Developer (Mobile & Web)",
-        TEXT_WORK_EXPERIENCE_ITEM_3: "PTT Digital Solutions Company Limited (May 2021 - Present",
+        TEXT_WORK_EXPERIENCE_ITEM_3: "PTT Digital Solutions Company Limited (May 2021 - Present)",
         TEXT_WORK_EXPERIENCE_POSITION_3: "Mobile Developer (Flutter)",
         TEXT_WORK_EXPERIENCE_PROJECT_1: "ttb Smart Shop",
         TEXT_WORK_EXPERIENCE_DETAIL_1_1: "✓ Develop ttb smartshop merchant application from version 2.x.x to version 3.x.x (re-branding)",
