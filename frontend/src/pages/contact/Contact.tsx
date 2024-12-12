@@ -1,9 +1,7 @@
 import { Alert, Box, Fade, Grid, Snackbar, Typography } from "@mui/material";
 import CustomAppbar from "../../components/appbar/CustomAppbar";
 import themes from "../../constants/themes";
-import facebookImg from "../../images/facebook.png";
 import tiktokImg from "../../images/tiktok.png";
-import instagramImg from "../../images/instagram.png";
 import lineImg from "../../images/line.png";
 import gmailImg from "../../images/gmail.png";
 import telephoneImg from "../../images/telephone.png";

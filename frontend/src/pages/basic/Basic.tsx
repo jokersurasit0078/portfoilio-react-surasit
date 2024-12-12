@@ -1,9 +1,12 @@
-import { Box, Chip, Fade, Grid, Typography } from "@mui/material";
+import { Box, Fade, Grid } from "@mui/material";
 import CustomAppbar from "../../components/appbar/CustomAppbar";
 import themes from "../../constants/themes";
 import { word } from "../../languages/Word";
 import CustomHeader from "../../components/text/CustomHeader";
 import Footer from "../../components/footer/Footer";
+import RowHeader from "./components/RowHeader";
+import RowDetail from "./components/RowDetail";
+import CustomDivider from "./components/CustomDivider";
 
 export default function Basic() {
   const fadeTime = 500;
@@ -25,93 +28,6 @@ export default function Basic() {
   const arrFilter = "[6, 7]";
   // DATE
   const today = new Date();
-
-  const CustomDivider = (prosp: any) => {
-    return (
-      <div
-        style={{
-          backgroundColor: "white",
-          width: "100%",
-          height: "1px",
-          marginTop: themes.marginComponent / 3,
-          marginBottom: themes.marginComponent / 3,
-        }}
-      />
-    );
-  };
-
-  const renderRowHeader = (header: string) => {
-    return (
-      <Grid item xs={12} sx={{ mb: `${themes.marginComponent / 3}px` }}>
-        <Chip
-          sx={{ bgcolor: themes.color.main }}
-          label={
-            <Typography
-              sx={{
-                fontSize: {
-                  xs: themes.fontsize.default,
-                  md: themes.fontsize.big,
-                },
-                color: themes.color.mainText,
-                fontWeight: "bold",
-              }}
-            >
-              {header}
-            </Typography>
-          }
-        />
-      </Grid>
-    );
-  };
-
-  const renderRowDetail = (
-    xs: number,
-    title: string,
-    result: any,
-    mb?: boolean
-  ) => {
-    return (
-      <Grid
-        container
-        item
-        xs={xs}
-        columns={{ xs: 2, md: 12 }}
-        direction={"row"}
-        justifyContent={"flex-start"}
-        alignItems={"flex-start"}
-        wrap={"nowrap"}
-        sx={{
-          pl: `${themes.marginComponent / 2}px`,
-          pr: `${themes.marginComponent / 3}px`,
-          mb: mb ? `${themes.marginComponent / 10}px` : 0,
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: {
-              xs: themes.fontsize.small,
-              md: themes.fontsize.default,
-            },
-            color: themes.color.mainText,
-          }}
-        >
-          {title}
-        </Typography>
-        <Typography
-          sx={{
-            fontSize: {
-              xs: themes.fontsize.small,
-              md: themes.fontsize.default,
-            },
-            color: themes.color.third,
-            pl: `${themes.marginComponent / 3}px`,
-          }}
-        >
-          {result ? `// ${result}` : ""}
-        </Typography>
-      </Grid>
-    );
-  };
 
   const renderJavaScriptMath = () => {
     return (
@@ -147,31 +63,75 @@ export default function Basic() {
             boxShadow: themes.shadow,
           }}
         >
-          {renderRowHeader("JavaScript Math")}
-          {renderRowDetail(12, "const PI = 3.14;", "", true)}
-          {renderRowDetail(6, "Math.round(PI);", Math.round(PI), true)}
-          {renderRowDetail(6, "Math.floor(PI);", Math.floor(PI), true)}
-          {renderRowDetail(6, "Math.ceil(PI);", Math.ceil(PI), true)}
-          {renderRowDetail(6, "Math.pow(2, 3);", Math.pow(2, 3), true)}
-          {renderRowDetail(6, "Math.sqrt(9);", Math.sqrt(9), true)}
-          {renderRowDetail(6, "Math.abs(-9);", Math.abs(-9), true)}
-          {renderRowDetail(
-            6,
-            "Math.min(1, 2, 3, 4, 5);",
-            Math.min(1, 2, 3, 4, 5),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "Math.max(1, 2, 3, 4, 5);",
-            Math.max(1, 2, 3, 4, 5),
-            true
-          )}
-          {renderRowDetail(6, "Math.random();", "0.01... - 0.99...", true)}
-          {renderRowDetail(6, "Math.floor(Math.random() * 10);", "0-9", true)}
-          {renderRowDetail(6, "Math.sin(90);", Math.sin(90), true)}
-          {renderRowDetail(6, "Math.cos(90);", Math.cos(90), true)}
-          {renderRowDetail(12, "Math.tan(90);", Math.tan(90))}
+          <RowHeader header={"JavaScript Math"} />
+          <RowDetail xs={12} title={"const PI = 3.14;"} result={""} mb={true} />
+          <RowDetail
+            xs={6}
+            title={"Math.round(PI);"}
+            result={Math.round(PI)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.floor(PI);"}
+            result={Math.floor(PI)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.ceil(PI);"}
+            result={Math.ceil(PI)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.pow(2, 3);"}
+            result={Math.pow(2, 3)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.sqrt(9);"}
+            result={Math.sqrt(9)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.abs(-9);"}
+            result={Math.abs(-9)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.min(1, 2, 3, 4, 5);"}
+            result={Math.min(1, 2, 3, 4, 5)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.max(1, 2, 3, 4, 5);"}
+            result={Math.max(1, 2, 3, 4, 5)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.random();"}
+            result={"0.01... - 0.99..."}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.sin(90);"}
+            result={Math.sin(90)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Math.cos(90);"}
+            result={Math.cos(90)}
+            mb={true}
+          />
+          <RowDetail xs={12} title={"Math.tan(90);"} result={Math.tan(90)} />
         </Grid>
       </Fade>
     );
@@ -211,30 +171,79 @@ export default function Basic() {
             boxShadow: themes.shadow,
           }}
         >
-          {renderRowHeader("Number in JavaScript")}
-          {renderRowDetail(12, "const PI = 3.14;", "", true)}
-          {renderRowDetail(6, "PI.toFixed(0);", PI.toFixed(0), true)}
-          {renderRowDetail(6, "PI.toFixed(1);", PI.toFixed(1), true)}
-          {renderRowDetail(6, "PI.toFixed(2);", PI.toFixed(2), true)}
-          {renderRowDetail(6, "PI.toPrecision(1);", PI.toPrecision(1), true)}
-          {renderRowDetail(6, "PI.valueOf();", PI.valueOf(), true)}
-          {renderRowDetail(6, "Number(new Date());", Number(new Date()), true)}
-          {renderRowDetail(6, `parseInt("3.14");`, parseInt("3.14"), true)}
-          {renderRowDetail(
-            6,
-            `parseFloat("7.5 days");`,
-            parseFloat("7.5 days"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "Number.MAX_VALUE();",
-            "1.7976931348623157e+308",
-            true
-          )}
-          {renderRowDetail(6, "Number.MIN_VALUE();", "5e-324", true)}
-          {renderRowDetail(6, "Number.POSITIVE_INFINITY();", "Infinity", true)}
-          {renderRowDetail(6, "Number.NEGATIVE_INFINITY();", "-Infinity")}
+          <RowHeader header={"Number in JavaScript"} />
+          <RowDetail xs={12} title={"const PI = 3.14;"} result={""} mb={true} />
+          <RowDetail
+            xs={6}
+            title={"PI.toFixed(0);"}
+            result={PI.toFixed(0)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"PI.toFixed(1);"}
+            result={PI.toFixed(1)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"PI.toFixed(2);"}
+            result={PI.toFixed(2)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"PI.toPrecision(1);"}
+            result={PI.toPrecision(1)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"PI.valueOf());"}
+            result={PI.valueOf()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Number(new Date());"}
+            result={Number(new Date())}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`parseInt("3.14");`}
+            result={parseInt("3.14")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`parseFloat("7.5 days");`}
+            result={parseFloat("7.5 days")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Number.MAX_VALUE();"}
+            result={"1.7976931348623157e+308"}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Number.MIN_VALUE();"}
+            result={"5e-324"}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Number.POSITIVE_INFINITY();"}
+            result={"Infinity"}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"Number.NEGATIVE_INFINITY();"}
+            result={"-Infinity"}
+          />
         </Grid>
       </Fade>
     );
@@ -274,85 +283,91 @@ export default function Basic() {
             boxShadow: themes.shadow,
           }}
         >
-          {renderRowHeader("JavaScript String Methods")}
-          {renderRowDetail(
-            6,
-            `" Hello World ".trim();`,
-            `"${" Hello World ".trim()}"`,
-            true
-          )}
-          {renderRowDetail(6, `"Hello World".length();`, hello.length, true)}
-          {renderRowDetail(
-            6,
-            `"Hello World".charAt(1);`,
-            hello.charAt(1),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".startsWith("Hello");`,
-            hello.startsWith("Hello"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".endsWith("d");`,
-            hello.endsWith("d"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".includes("World");`,
-            hello.includes("World"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".indexOf("World");`,
-            hello.indexOf("World"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".match(/[A-Z]/g);`,
-            `["H", "W"]`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".repeat(2);`,
-            `"${hello.repeat(2)}"`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".replace("World", "Earth");`,
-            `"${hello.replace("World", "Earth")}"`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".slice(6, 10);`,
-            `"${hello.slice(6, 10)}"`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".split(" ");`,
-            `["Hello", "World"]`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".toLowerCase();`,
-            `"${hello.toLowerCase()}"`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `"Hello World".toUpperCase();`,
-            `"${hello.toUpperCase()}"`
-          )}
+          <RowHeader header={"JavaScript String Methods"} />
+          <RowDetail
+            xs={6}
+            title={`" Hello World ".trim();`}
+            result={`"${" Hello World ".trim()}"`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".length();`}
+            result={hello.length}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".charAt(1);`}
+            result={hello.charAt(1)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".startsWith("Hello");`}
+            result={hello.startsWith("Hello")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".endsWith("d");`}
+            result={hello.endsWith("d")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".includes("World");`}
+            result={hello.includes("World")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".indexOf("World");`}
+            result={hello.indexOf("World")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".match(/[A-Z]/g);`}
+            result={`["H", "W"]`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".repeat(2);`}
+            result={`"${hello.repeat(2)}"`}
+            mb={true}
+          />
+
+          <RowDetail
+            xs={6}
+            title={`"Hello World".replace("World", "Earth");`}
+            result={`"${hello.replace("World", "Earth")}"`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".slice(6, 10);`}
+            result={`"${hello.slice(6, 10)}"`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".split(" ");`}
+            result={`["Hello", "World"]`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".toLowerCase();`}
+            result={`"${hello.toLowerCase()}"`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`"Hello World".toUpperCase();`}
+            result={`"${hello.toUpperCase()}"`}
+          />
         </Grid>
       </Fade>
     );
@@ -392,46 +407,96 @@ export default function Basic() {
             boxShadow: themes.shadow,
           }}
         >
-          {renderRowHeader("JavaScript Array Methods")}
-          {renderRowDetail(6, `${arrStr}.at(1);`, arr.at(1), true)}
-          {renderRowDetail(6, `${arrStr}.push(8);`, arrPush, true)}
-          {renderRowDetail(6, `${arrStr}.pop();`, arrPop, true)}
-          {renderRowDetail(6, `${arrStr}.fill();`, arrFill, true)}
-          {renderRowDetail(6, `${arrStr}.join("x");`, arrJoin, true)}
-          {renderRowDetail(6, `${arrStr}.shift();`, arrShift, true)}
-          {renderRowDetail(6, `${arrStr}.reverse();`, arrReverse, true)}
-          {renderRowDetail(6, `${arrStr}.unshift(3);`, arrUnShift, true)}
-          {renderRowDetail(6, `${arrStr}.includes(6);`, arr.includes(6), true)}
-          {renderRowDetail(6, `${arrStr}.map(item => item * 2);`, arrMap, true)}
-          {renderRowDetail(
-            6,
-            `${arrStr}.filter(item => item > 5);`,
-            arrFilter,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `${arrStr}.find(item => item > 5);`,
-            `${arr.find((item) => item > 5)} (first match)`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `${arrStr}.every(item => item > 0);`,
-            arr.every((item) => item > 0),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `${arrStr}.findIndex(item => item === 5);`,
-            arr.findIndex((item) => item === 5),
-            true
-          )}
-          {renderRowDetail(
-            12,
-            `${arrStr}.reduce((prev, curr) => prev + curr, 0);`,
-            arr.reduce((prev, curr) => prev + curr, 0)
-          )}
+          <RowHeader header={"JavaScript Array Methods"} />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.at(1);`}
+            result={arr.at(1)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.push(8);`}
+            result={arrPush}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.pop();`}
+            result={arrPop}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.fill();`}
+            result={arrFill}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.join("x");`}
+            result={arrJoin}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.shift();`}
+            result={arrShift}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.reverse();`}
+            result={arrReverse}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.unshift(3);`}
+            result={arrUnShift}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.includes(6);`}
+            result={arr.includes(6)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.map(item => item * 2);`}
+            result={arrMap}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.filter(item => item > 5);`}
+            result={arrFilter}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.find(item => item > 5)`}
+            result={`${arr.find((item) => item > 5)} (first match)`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.every(item => item > 0);`}
+            result={arr.every((item) => item > 0)}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`${arrStr}.findIndex(item => item === 5);`}
+            result={arr.findIndex((item) => item === 5)}
+            mb={true}
+          />
+          <RowDetail
+            xs={12}
+            title={`${arrStr}.reduce((prev, curr) => prev + curr, 0);`}
+            result={arr.reduce((prev, curr) => prev + curr, 0)}
+          />
         </Grid>
       </Fade>
     );
@@ -471,110 +536,164 @@ export default function Basic() {
             boxShadow: themes.shadow,
           }}
         >
-          {renderRowHeader("JavaScript Date Methods")}
-          {renderRowDetail(12, "const today = new Date();", "", true)}
-          {renderRowDetail(12, "today", today, true)}
-          {renderRowDetail(6, "today.getDate()", today.getDate(), true)}
-          {renderRowDetail(
-            6,
-            "today.getDay()",
-            `${today.getDay()} (0 is Sunday)`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "today.getMonth()",
-            `${today.getMonth()} (0 is January)`,
-            true
-          )}
-          {renderRowDetail(6, "today.getFullYear()", today.getFullYear(), true)}
-          {/* {renderRowDetail(6, "today.getDate()", today.getYear(), true)} */}
-          {renderRowDetail(6, "today.getHours()", today.getHours(), true)}
-          {renderRowDetail(6, "today.getMinutes()", today.getMinutes(), true)}
-          {renderRowDetail(6, "today.getSeconds()", today.getSeconds(), true)}
-          {renderRowDetail(
-            6,
-            "today.getMilliseconds()",
-            today.getMilliseconds(),
-            true
-          )}
-          {renderRowDetail(6, "today.getTime()", today.getTime(), true)}
-          {renderRowDetail(
-            6,
-            "today.getTimezoneOffset()",
-            today.getTimezoneOffset()
-          )}
+          <RowHeader header={"JavaScript Date Methods"} />
+          <RowDetail
+            xs={12}
+            title={"const today = new Date();"}
+            result={""}
+            mb={true}
+          />
+          <RowDetail xs={12} title={"today"} result={today} mb={true} />
+          <RowDetail
+            xs={6}
+            title={"today.getDate()"}
+            result={today.getDate()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getDay()"}
+            result={`${today.getDay()} (0 is Sunday)`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getMonth()"}
+            result={`${today.getMonth()} (0 is January)`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getFullYear()"}
+            result={today.getFullYear()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getHours()"}
+            result={today.getHours()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getMinutes()"}
+            result={today.getMinutes()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getSeconds()"}
+            result={today.getSeconds()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getMilliseconds()"}
+            result={today.getMilliseconds()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getTime()"}
+            result={today.getTime()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getTimezoneOffset()"}
+            result={today.getTimezoneOffset()}
+          />
           <CustomDivider />
-          {renderRowDetail(6, "today.getUTCDate()", today.getUTCDate(), true)}
-          {renderRowDetail(
-            6,
-            "today.getUTCDay()",
-            `${today.getUTCDay()} (0 is Sunday)`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "today.getUTCMonth()",
-            `${today.getUTCMonth()} (0 is January)`,
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "today.getUTCFullYear()",
-            today.getUTCFullYear(),
-            true
-          )}
-          {renderRowDetail(6, "today.getUTCHours()", today.getUTCHours(), true)}
-          {renderRowDetail(
-            6,
-            "today.getUTCMinutes()",
-            today.getUTCMinutes(),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "today.getUTCSeconds()",
-            today.getUTCSeconds(),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            "today.getUTCMilliseconds()",
-            today.getUTCMilliseconds()
-          )}
+          <RowDetail
+            xs={6}
+            title={"today.getUTCDate()"}
+            result={today.getUTCDate()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCDay()"}
+            result={`${today.getUTCDay()} (0 is Sunday)`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCMonth()"}
+            result={`${today.getUTCMonth()} (0 is January)`}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCFullYear()"}
+            result={today.getUTCFullYear()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCHours()"}
+            result={today.getUTCHours()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCMinutes()"}
+            result={today.getUTCMinutes()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCSeconds()"}
+            result={today.getUTCSeconds()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.getUTCMilliseconds()"}
+            result={today.getUTCMilliseconds()}
+          />
+
           <CustomDivider />
-          {renderRowDetail(12, "today.toString()", today.toString(), true)}
-          {renderRowDetail(
-            6,
-            `today.toLocaleString("th")`,
-            today.toLocaleString("th"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `today.toDateString()`,
-            today.toDateString(),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `today.toLocaleDateString("th")`,
-            today.toLocaleDateString("th"),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `today.toTimeString()`,
-            today.toTimeString(),
-            true
-          )}
-          {renderRowDetail(
-            6,
-            `today.toLocaleTimeString("th")`,
-            today.toLocaleTimeString("th"),
-            true
-          )}
-          {renderRowDetail(6, "today.toUTCString()", today.toUTCString())}
+          <RowDetail
+            xs={12}
+            title={"today.toString()"}
+            result={today.toString()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`today.toLocaleString("th")`}
+            result={today.toLocaleString("th")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.toDateString()"}
+            result={today.toDateString()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`today.toLocaleDateString("th")`}
+            result={today.toLocaleDateString("th")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.toTimeString()"}
+            result={today.toTimeString()}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={`today.toLocaleTimeString("th")`}
+            result={today.toLocaleTimeString("th")}
+            mb={true}
+          />
+          <RowDetail
+            xs={6}
+            title={"today.toUTCString()"}
+            result={today.toUTCString()}
+          />
         </Grid>
       </Fade>
     );

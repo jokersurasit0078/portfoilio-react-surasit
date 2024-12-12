@@ -1,4 +1,4 @@
-import { Box, Chip, Fade, Grid, Typography } from "@mui/material";
+import { Box, Fade, Grid } from "@mui/material";
 import CustomAppbar from "../../components/appbar/CustomAppbar";
 import themes from "../../constants/themes";
 import { word } from "../../languages/Word";
@@ -17,7 +17,6 @@ export default function Skill() {
     "JavaScript / TypeScript",
     "Dart",
   ];
-
   const listFramework = ["React", "React Native", "Flutter"];
   const listLibrary = [
     "MUI",
